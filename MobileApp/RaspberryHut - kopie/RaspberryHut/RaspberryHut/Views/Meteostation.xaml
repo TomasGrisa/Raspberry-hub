@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RaspberryHut.Views.Meteostation"
+            xmlns:vm="clr-namespace:RaspberryHut.ViewModels"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
+            xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            BarBackgroundColor="{StaticResource Primary}"
+            SelectedTabColor="ivory"
+            Style="{d:StaticResource TabStyle}"
+            Title="Meteostanice">
+
+    <TabbedPage.BindingContext>
+        <vm:MeteostationViewModel/>
+    </TabbedPage.BindingContext>
+
+    <TabbedPage.Resources>
+        <ResourceDictionary>
+            <!-- Define a style for the tabbed page title -->
+            <Style x:Key="TabbedPageTitleStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="1" />
+                <!-- Set your desired text size -->
+            </Style>
+        </ResourceDictionary>
+    </TabbedPage.Resources>
+
+    <!--Pages can be added as references or inline-->
+    <ContentPage Title="Zobrazení" BackgroundColor="{AppThemeBinding Light={StaticResource WindowColor}, Dark={StaticResource WindowColorDark}}" IconImageSource="chartIco.png">
+        <ScrollView>
+            <StackLayout Margin="20" VerticalOptions="Start" HorizontalOptions="Center">
+                <Label>Teplota</Label>
+                <microcharts:ChartView x:Name="ChartTemperature" Chart="{Binding TempChart}" HeightRequest="200" WidthRequest="380" />
+
+                <Label>Vlhkost</Label>
+                <microcharts:ChartView x:Name="ChartHumidity" Chart="{Binding HumidityChart}" HeightRequest="200" WidthRequest="380" />
+
+                <Label>Atmosférický tlak</Label>
+                <microcharts:ChartView x:Name="ChartPressure" Chart="{Binding PressureChart}" HeightRequest="200" WidthRequest="380" />
+
+                <Label>Rychlost větru</Label>
+                <microcharts:ChartView x:Name="ChartWindSpeed" Chart="{Binding WindSpeedChart}" HeightRequest="200" WidthRequest="380" />
+
+                <Label>Srážky</Label>
+                <microcharts:ChartView x:Name="ChartRainfall" Chart="{Binding RainfallChart}" HeightRequest="200" WidthRequest="380" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage Title="List" BackgroundColor="{AppThemeBinding Light={StaticResource WindowColor}, Dark={StaticResource WindowColorDark}}" IconImageSource="squareListIco.png">
+        <ListView Style="{StaticResource ListViewStyle}" x:Name="MeteoListView" ItemsSource="{Binding ListMeteo}" Refreshing="RefreshListView" >
+            <ListView.Header>
+                <Grid Margin="0,0,0,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Style="{StaticResource ListViewHeaderText}" Text="Teplota" Grid.Column="0"/>
+                    <Label Style="{StaticResource ListViewHeaderText}" Text="Vlhkost" Grid.Column="1"/>
+                    <Label Style="{StaticResource ListViewHeaderText}" Text="Tlak" Grid.Column="2"/>
+                    <Label Style="{StaticResource ListViewHeaderText}" Text="Rychlost větru" Grid.Column="3" FontSize="10"/>
+                    <Label Style="{StaticResource ListViewHeaderText}" Text="Směr větru" Grid.Column="4"/>
+                    <Label Style="{StaticResource ListViewHeaderText}" Text="Srážky" Margin="0" Grid.Column="5"/>
+                    <Label Style="{StaticResource ListViewHeaderText}" Text="Datum" Grid.Column="6"/>
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text ="{Binding Temperature}" HorizontalOptions="Fill" HorizontalTextAlignment="Center" Margin="1"></Label>
+                            <Label Grid.Column="1" Text ="{Binding Humidity}" HorizontalOptions="Fill" HorizontalTextAlignment="Center" Margin="1"></Label>
+                            <Label Grid.Column="2" Text ="{Binding Pressure}" HorizontalOptions="Fill" HorizontalTextAlignment="Center" Margin="1"></Label>
+                            <!--, StringFormat={}{0:F1}-->
+                            <Label Grid.Column="3" Text ="{Binding WindSpeed}" HorizontalOptions="Fill" HorizontalTextAlignment="Center" Margin="1"></Label>
+                            <Label Grid.Column="4" Text ="{Binding WindDir, Converter={StaticResource WindDirConverter}}" HorizontalOptions="Fill" HorizontalTextAlignment="Center" Margin="1"></Label>
+                            <Label Grid.Column="5" Text ="{Binding Rainfall}" HorizontalOptions="Fill" HorizontalTextAlignment="Center" Margin="0"></Label>
+                            <Label Grid.Column="6" Text ="{Binding Date, StringFormat='{0:HH:mm dd-MM}'}" HorizontalOptions="Fill" HorizontalTextAlignment="Center" Margin="2"></Label>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage>
+</TabbedPage>

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "Q/qbCZam5/nfQdss+Nbjx7tyShZRv6ROvFKWxEJjBozVBlylRGjdqBWl5nzTrtn2Mtb1uFxlW2tbfPVccILiBA==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\FirstTry\\FirstTry\\FirstTry.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1012",
+      "level": "Error",
+      "message": "Pro nejméně jedno cílové rozhraní není k dispozici verze platformy, i když má platformu zadanou: net7.0-ios, net7.0-maccatalyst"
+    }
+  ]
+}

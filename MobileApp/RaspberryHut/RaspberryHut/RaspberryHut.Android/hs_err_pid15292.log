@@ -1,0 +1,78 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 32744 bytes for ChunkPool::allocate
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (arena.cpp:78), pid=15292, tid=3904
+#
+# JRE version: OpenJDK Runtime Environment Microsoft-8297089 (17.0.8.1+1) (build 17.0.8.1+1-LTS)
+# Java VM: OpenJDK 64-Bit Server VM Microsoft-8297089 (17.0.8.1+1-LTS, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: com.xamarin.manifestmerger.Main obj\Debug\130\android\manifestmerger.rsp
+
+Host: Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz, 4 cores, 11G, Failed to allocate version_info
+Time: Sat May 18 15:51:33 2024 Stiled to allocate version_info elapsed time: 0.079856 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000002353b3c0ab0):  JavaThread "C1 CompilerThread0" daemon [_thread_in_native, id=3904, stack(0x000000d4f7c00000,0x000000d4f7d00000)]
+
+
+Current CompileTask:
+C1:     79   40   !   3      
+[error occurred during error reporting (printing current compile task), id 0xe0000001, Out of Memory Error (s\src\hotspot\share\memory\arena.cpp:78)]
+
+Stack: [0x000000d4f7c00000,0x000000d4f7d00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x67bf3a]
+V  [jvm.dll+0x83a024]
+V  [jvm.dll+0x83b7ce]
+V  [jvm.dll+0x83be33]
+V  [jvm.dll+0x24785f]
+V  [jvm.dll+0xac5dc]
+V  [jvm.dll+0xac98c]
+V  [jvm.dll+0x7a74cc]
+V  [jvm.dll+0x7a75b9]
+V  [jvm.dll+0x62f9b9]
+V  [jvm.dll+0x22dd36]
+V  [jvm.dll+0x22e2b7]
+V  [jvm.dll+0x839eba]
+V  [jvm.dll+0x83b7ce]
+V  [jvm.dll+0x83be33]
+V  [jvm.dll+0x24785f]
+V  [jvm.dll+0xac5dc]
+V  [jvm.dll+0xac98c]
+V  [jvm.dll+0x6693ab]
+V  [jvm.dll+0x14bcbc]
+V  [jvm.dll+0x151d57]
+V  [jvm.dll+0x15215a]
+V  [jvm.dll+0x1523f7]
+V  [jvm.dll+0x15222e]
+V  [jvm.dll+0x136079]
+V  [jvm.dll+0x135bda]
+V  [jvm.dll+0x135dc6]
+V  [jvm.dll+0x13525a]
+V  [jvm.dll+0x136f21]
+V  [jvm.dll+0x2291ea]
+V  [jvm.dll+0x22724c]
+V  [jvm.dll+0x7efd0c]
+V  [jvm.dll+0x7ea13a]

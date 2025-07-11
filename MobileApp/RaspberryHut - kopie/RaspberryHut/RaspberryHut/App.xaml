@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RaspberryHut.Converters"
+             xmlns:markups="clr-namespace:OnScreenSizeMarkup.Forms;assembly=OnScreenSizeMarkup.Forms"
+             x:Class="RaspberryHut.App">
+    <!--xmlns:controls="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"-->
+    <!--
+        Define global resources and styles here, that apply to all pages in your app.
+    -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <local:WindDirConverter x:Key="WindDirConverter" />
+            <local:GateConverter x:Key="GateConverter" />
+            <local:WaterConverter x:Key="WaterConverter" />
+            <local:LightsConverter x:Key="LightsConverter" />
+            <Color x:Key="Primary">#03a309</Color>
+            <Color x:Key="SwitchOnColor">#03a309</Color>
+            <Color x:Key="SwitchOffColor">white</Color>
+            <Color x:Key="WindowColor">#c4c4c4</Color>
+            <Color x:Key="WindowColorDark">#222</Color>
+            <Color x:Key="WhiteText">White</Color>
+            <Color x:Key="BlackText">Black</Color>
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="#332196F3" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+            <Style TargetType="Switch">
+                <Setter Property="ThumbColor" Value="{StaticResource SwitchOffColor}" />
+                <Setter Property="OnColor" Value="{StaticResource SwitchOnColor}" />
+                <!--<Setter Property="HeightRequest" Value="40"/>-->
+            </Style>
+
+            <Style x:Key="SegmentedButtons" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Primary}"/>
+                <Setter Property="WidthRequest" Value="100"/>
+                <Setter Property="HeightRequest" Value="100"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="{markups:OnScreenSize DefaultSize=15, Small=10, Medium=15, Large=20, ExtraLarge=30}"/>
+            </Style>
+            
+            <Style x:Key="BaseLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" />
+            </Style>
+
+             <Style x:Key="ListViewStyle" TargetType="ListView">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light='#c4c4c4', Dark='#222'}" />
+                <Setter Property="IsPullToRefreshEnabled" Value="True"/>
+                
+                <!--<Setter Property="Label.FontSize" Value="Large"/>
+                <Setter Property="Label.FontAttributes" Value="Bold"/>
+                <Setter Property="Label.HorizontalOptions" Value="Fill"/>
+                <Setter Property="Label.HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="Label.VerticalTextAlignment" Value="Center"/>
+                <Setter Property="Label.Margin" Value="1"/>-->
+            </Style>
+            <Style x:Key="ListViewHeaderText" TargetType="Label">
+                <!--<Label Text="Sample Text" FontSize="{markups:OnScreenSize DefaultSize=Large, Medium=Large, Large=50, ExtraLarge=70}" />-->
+
+                <!--<Label Text="Obývák" HorizontalOptions="Fill"  Grid.Column="0" FontSize="Header" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="1"/>-->
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+                <Setter Property="FontSize" Value="{markups:OnScreenSize DefaultSize=15, Small=10, Medium=12, Large=20, ExtraLarge=30}"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="1, 5, 1, 0"/>
+            </Style>
+            <Style TargetType="TabbedPage" x:Key="TabStyle">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}"/>
+                <Setter Property="SelectedTabColor" Value="White"/>
+                <Setter Property="UnselectedTabColor" Value="#111"/>
+            </Style>
+            <Style TargetType="Entry" x:Key="EntryStyle">
+                <Setter Property="FontSize" Value="{markups:OnScreenSize DefaultSize=15, Small=10, Medium=25, Large=20, ExtraLarge=30}"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="0, 0, 0, 10"/>
+                <!--chci změnit barvu selectnutého textu-->
+            </Style>
+            <Style TargetType="Label" x:Key="TextHeader">
+                <Setter Property="FontSize" Value="{markups:OnScreenSize DefaultSize=15, Small=10, Medium=20, Large=30, ExtraLarge=40}"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            </Style>
+
+            <Style TargetType="TimePicker" x:Key="TimePicker">
+                <Setter Property="FontSize" Value="{markups:OnScreenSize DefaultSize=20, Small=15, Medium=38, Large=50, ExtraLarge=60}"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+        </ResourceDictionary>        
+    </Application.Resources>
+</Application>

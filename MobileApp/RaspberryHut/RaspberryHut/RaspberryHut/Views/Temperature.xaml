@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RaspberryHut.Views.Temperature"
+            xmlns:vm="clr-namespace:RaspberryHut.ViewModels"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
+            xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms" 
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            Title="{Binding Title}"
+            Style="{StaticResource TabStyle}">
+
+    <TabbedPage.BindingContext>
+        <vm:TemperatureViewModel/>
+    </TabbedPage.BindingContext>
+
+    <TabbedPage.Resources>
+        <ResourceDictionary>
+            <!-- Define a style for the tabbed page title -->
+            <Style x:Key="TabbedPageTitleStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="1" />
+            </Style>
+        </ResourceDictionary>
+    </TabbedPage.Resources>
+
+    <ContentPage Title="Ovládání"  BackgroundColor="{AppThemeBinding Light={StaticResource WindowColor}, Dark={StaticResource WindowColorDark}}" IconImageSource="controlsIco.png">
+        <ScrollView>
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <StackLayout Margin="0, 60" >
+                    <Label Style="{StaticResource TextHeader}" TextColor="{DynamicResource TextColor}">Topení obývací pokoj</Label>
+                    <Entry x:Name="LivingEntry" Keyboard="Numeric" Placeholder="{Binding LivingPlaceholder}" Text="{Binding LivingPlaceholder}" Style="{StaticResource EntryStyle}" Completed="DataCHanged" TextColor="{DynamicResource TextColor}" />
+                    <StackLayout >
+                        <Switch x:Name="LivingSwitch" HorizontalOptions="Center" VerticalOptions="Center" IsToggled="{Binding ControlLivingState}" Toggled="DataCHanged" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Margin="0, 50">
+                    <Label Style="{StaticResource TextHeader}" TextColor="{DynamicResource TextColor}">Topení Koupelna</Label>
+                    <Entry x:Name="BathEntry" Keyboard="Numeric" Placeholder="{Binding BathPlaceholder}" Text="{Binding BathPlaceholder}" Style="{StaticResource EntryStyle}" Completed="DataCHanged" TextColor="{DynamicResource TextColor}"/>
+                    <Switch x:Name="BathSwitch" HorizontalOptions="Center" VerticalOptions="Center" IsToggled="{Binding ControlBathState}" Toggled="DataCHanged"/>
+                </StackLayout>
+                <StackLayout Margin="0, 50">
+                    <Label Style="{StaticResource TextHeader}" TextColor="{DynamicResource TextColor}">Ohřev vody</Label>
+                    <Entry x:Name="BoilerEntry" Keyboard="Numeric" Placeholder="{Binding BoilerPlaceholder}" Text="{Binding BoilerPlaceholder}" Style="{StaticResource EntryStyle}" Completed="DataCHanged" TextColor="{DynamicResource TextColor}"/>
+                    <Switch x:Name="BoilerSwitch"  HorizontalOptions="Center" VerticalOptions="Center" IsToggled="{Binding ControlBoilerState}" Toggled="DataCHanged"/>
+                </StackLayout>
+                <StackLayout Margin="0, 50">
+                    <Button Text="Aktualizovat data" Clicked="UpdateClicked"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+    
+    
+    <ContentPage Title="Zobrazení" BackgroundColor="{AppThemeBinding Light={StaticResource WindowColor}, Dark={StaticResource WindowColorDark}}" IconImageSource="chartIco.png">
+        <ScrollView>
+            <StackLayout Margin="10" VerticalOptions="Start" HorizontalOptions="Center">
+                <Label Margin="0, 0, 0, 0" FontSize="20" HorizontalTextAlignment="Center" TextColor="{DynamicResource TextColor}">Obývací Pokoj</Label>
+                <microcharts:ChartView x:Name="ChartLivingroom" Chart="{Binding LivChart}" HeightRequest="200" WidthRequest="380" />
+
+                <Label Margin="0, 10, 0, 0" FontSize="20" HorizontalTextAlignment="Center" TextColor="{DynamicResource TextColor}">Koupelna</Label>
+                <microcharts:ChartView x:Name="ChartBathroom" Chart="{Binding BathChart}" HeightRequest="200" WidthRequest="380" />
+
+                <Label Margin="0, 10, 0, 0" FontSize="20" HorizontalTextAlignment="Center" TextColor="{DynamicResource TextColor}">Sklep</Label>
+                <microcharts:ChartView x:Name="ChartCellar" Chart="{Binding CellarChart}" HeightRequest="200" WidthRequest="380" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+
+    <ContentPage Title="List"  BackgroundColor="{AppThemeBinding Light={StaticResource WindowColor}, Dark={StaticResource WindowColorDark}}" IconImageSource="squarelistIco.png">
+        <!--<ScrollView>
+            <StackLayout HorizontalOptions="Center" Margin="10, 50">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        --><!-- Add more ColumnDefinitions for additional rooms --><!--
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Obývací pokoj" Grid.Column="0" FontAttributes="Bold" HorizontalOptions="Center" />
+                    <Label Text="Kouplena" Grid.Column="1" FontAttributes="Bold" HorizontalOptions="Center" />
+                    <Label Text="Sklep" Grid.Column="2" FontAttributes="Bold" HorizontalOptions="Center" />
+                    <Label Text="Voda" Grid.Column="3" FontAttributes="Bold" HorizontalOptions="Center" />
+                    <Label Text="Datum" Grid.Column="4" FontAttributes="Bold" HorizontalOptions="Center" />
+                    --><!-- Add more Labels for additional rooms --><!--
+                </Grid>
+
+                --><!-- ListView for temperature data --><!--
+                <ListView ItemsSource="{Binding list}" BackgroundColor="red">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid BackgroundColor="Green">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        --><!-- Add more ColumnDefinitions for additional rooms --><!--
+                                    </Grid.ColumnDefinitions>
+                                    <Label BackgroundColor="Blue" Text="{Binding LivingRoom}" Grid.Column="0" />
+                                    <Label Text="{Binding Bathroom}" Grid.Column="1" />
+                                    <Label Text="{Binding Cellar}" Grid.Column="2" />
+                                    <Label Text="{Binding Vater}" Grid.Column="3" />
+                                    <Label Text="{Binding Time}" Grid.Column="4" />
+                                    --><!-- Add more Labels for additional rooms --><!--
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <Button Margin="10, 50" Text="Načíst další" HeightRequest="50" WidthRequest="400"/>
+            </StackLayout>
+        </ScrollView>-->
+        <!--scrollable page na konci načíst další btn-->
+
+
+
+        <ListView Style="{StaticResource ListViewStyle}" x:Name="heaterListView" ItemsSource="{Binding ListTopeni}" Refreshing="RefreshListView" >
+            <ListView.Header>
+                <Grid Margin="0,0,0,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Style="{StaticResource ListViewHeaderText}" Text="Obývák" Grid.Column="0" TextColor="{DynamicResource TextColor}"/>
+                    <Label Style="{StaticResource ListViewHeaderText}" Text="Koupelna" Grid.Column="1" TextColor="{DynamicResource TextColor}"/>
+                    <Label Style="{StaticResource ListViewHeaderText}" Text="Sklep" Grid.Column="2" TextColor="{DynamicResource TextColor}"/>
+                    <Label Style="{StaticResource ListViewHeaderText}" Text="Boiler" Grid.Column="3" TextColor="{DynamicResource TextColor}"/>
+                    <Label Style="{StaticResource ListViewHeaderText}" Text="Datum" Grid.Column="4" TextColor="{DynamicResource TextColor}"/>
+                </Grid>
+            </ListView.Header>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text ="{Binding LivingRoomTemperature}" HorizontalOptions="Fill" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="1" TextColor="{DynamicResource TextColor}"></Label>
+                            <Label Grid.Column="1" Text ="{Binding BathroomTemperature}" HorizontalOptions="Fill" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="1" TextColor="{DynamicResource TextColor}"></Label>
+                            <Label Grid.Column="2" Text ="{Binding CellarTemperature}" HorizontalOptions="Fill" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="1" TextColor="{DynamicResource TextColor}"></Label>
+                            <Label Grid.Column="3" Text ="{Binding BoilerTemperature}" HorizontalOptions="Fill" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="1" TextColor="{DynamicResource TextColor}"></Label>
+                            <Label Grid.Column="4" Text ="{Binding Date, StringFormat='{0:HH:mm dd-MM-yy}'}" HorizontalOptions="Fill" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="2" TextColor="{DynamicResource TextColor}"></Label>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage>
+    
+    <!--ToDo Separator mezi header a footer, dynamicky přidávat záznami!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+
+</TabbedPage>

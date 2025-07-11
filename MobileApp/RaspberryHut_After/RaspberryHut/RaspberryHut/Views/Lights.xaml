@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="RaspberryHut.Views.Lights"
+            xmlns:vm="clr-namespace:RaspberryHut.ViewModels"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
+            xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            BarBackgroundColor="{StaticResource Primary}"
+            SelectedTabColor="ivory"
+            Style="{d:StaticResource TabStyle}"
+            Title="Světla">
+
+    <TabbedPage.BindingContext>
+        <vm:LightsViewModel/>
+    </TabbedPage.BindingContext>
+
+    <TabbedPage.Resources>
+        <ResourceDictionary>
+            <!-- Define a style for the tabbed page title -->
+            <Style x:Key="TabbedPageTitleStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="1" />
+                <!-- Set your desired text size -->
+            </Style>
+        </ResourceDictionary>
+    </TabbedPage.Resources>
+    <ContentPage Title="Ovládání"  BackgroundColor="{AppThemeBinding Light={StaticResource WindowColor}, Dark={StaticResource WindowColorDark}}" IconImageSource="controlsIco.png">
+        <ScrollView>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <StackLayout Margin="0, 30" >
+                <Label Style="{StaticResource TextHeader}" TextColor="{DynamicResource TextColor}">Čas spuštění</Label>
+                <TimePicker Format="HH:mm" Time="{Binding StartTime, Mode=TwoWay}" PropertyChanged="OnTimeChanged" Style="{StaticResource TimePicker}" TextColor="{DynamicResource TextColor}"/>
+            <!--<Entry x:Name="StartEntry" Keyboard="Numeric" Placeholder="Zadej text ve formátu hh:mm" Text="{Binding StartTime}" Style="{StaticResource EntryStyle}" Completed="DataCHanged" TextChanged="OnTextChanged"/>-->
+            </StackLayout>
+            <StackLayout Margin="0, 30">
+                <Label Style="{StaticResource TextHeader}" TextColor="{DynamicResource TextColor}">Čas vypnutí</Label>
+                <TimePicker Format="HH:mm" Time="{Binding EndTime, Mode=TwoWay}" PropertyChanged="OnTimeChanged" Style="{StaticResource TimePicker}" TextColor="{DynamicResource TextColor}"/>
+            <!--<Entry x:Name="EndEntry" Keyboard="Numeric" Placeholder="Zadej text ve formátu hh:mm" Text="{Binding EndTime}" Style="{StaticResource EntryStyle}" Completed="DataCHanged" TextChanged="OnTextChanged"/>-->
+            </StackLayout>
+            <StackLayout Margin="0, 30">
+                <Label Style="{StaticResource TextHeader}" TextColor="{DynamicResource TextColor}">Zapnout interval</Label>
+            <Switch x:Name="IntervalSwitch"  HorizontalOptions="Center" VerticalOptions="Center" IsToggled="{Binding IntervalState}" Toggled="Switch_Toggled" />
+            </StackLayout>
+            <BoxView HeightRequest="2" WidthRequest="270" BackgroundColor="Gray" Margin="0, 20, 0, 0" HorizontalOptions="Center"/>
+            <StackLayout Margin="0, 30">
+                <Label Style="{StaticResource TextHeader}" TextColor="{DynamicResource TextColor}">Zapnout světlo</Label>
+            <Switch x:Name="LightsSwitch"  HorizontalOptions="Center" VerticalOptions="Center" IsToggled="{Binding LightsState}" Toggled="Switch_Toggled"/>
+            </StackLayout>
+                <!--<StackLayout Margin="0, 50">
+                <Button Text="Aktualizovat data" Clicked="UpdateClicked"/>
+            </StackLayout>-->
+        </StackLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage Title="List" BackgroundColor="{AppThemeBinding Light={StaticResource WindowColor}, Dark={StaticResource WindowColorDark}}" IconImageSource="squareListIco.png">
+        <ListView Style="{StaticResource ListViewStyle}" x:Name="LightsListView" ItemsSource="{Binding ListLights}" Refreshing="RefreshListView" >
+            <ListView.Header>
+                <Grid Margin="0,0,0,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Style="{StaticResource ListViewHeaderText}" Text="Stav" Grid.Column="0" TextColor="{DynamicResource TextColor}"/>
+                    <Label Style="{StaticResource ListViewHeaderText}" Text="Datum" Grid.Column="1" TextColor="{DynamicResource TextColor}"/>
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text ="{Binding State_, Converter={StaticResource LightsConverter}}" VerticalTextAlignment="Center" HorizontalOptions="Fill" HorizontalTextAlignment="Center" Margin="1" TextColor="{DynamicResource TextColor}"></Label>
+                            <Label Grid.Column="1" Text ="{Binding Date, StringFormat='{0:HH:mm dd-MM-yy}'}" VerticalTextAlignment="Center" HorizontalOptions="Fill" HorizontalTextAlignment="Center" Margin="2" TextColor="{DynamicResource TextColor}"></Label>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage>
+</TabbedPage>

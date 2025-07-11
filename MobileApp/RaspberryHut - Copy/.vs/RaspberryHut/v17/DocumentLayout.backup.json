@@ -1,0 +1,919 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\viewmodels\\meteostationvewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\viewmodels\\meteostationvewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\viewmodels\\temperatureviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\viewmodels\\temperatureviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\models\\temperature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\models\\temperature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\views\\temperature.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\views\\temperature.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\models\\meteostation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\models\\meteostation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\converters\\gateconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\converters\\gateconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\services\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\services\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\viewmodels\\gateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\viewmodels\\gateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\viewmodels\\irrigationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\viewmodels\\irrigationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\models\\gate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\models\\gate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\views\\gate.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\views\\gate.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\views\\temperature.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\views\\temperature.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\views\\water.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\views\\water.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\views\\cleaner.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\views\\cleaner.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\views\\cleaner.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\views\\cleaner.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\views\\gate.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\views\\gate.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\views\\lights.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\views\\lights.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\views\\meteostation.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\views\\meteostation.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\appshell.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\appshell.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\app.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\app.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\raspberryhut.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\raspberryhut.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5920C867-0C94-434F-AEE8-BA9D8B7A0F9E}|RaspberryHut\\RaspberryHut.Android\\RaspberryHut.Android.csproj|C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\raspberryhut\\raspberryhut.android\\properties\\androidmanifest.xml||{4E01A4BC-CFCF-452C-8C08-51352512D197}",
+      "RelativeMoniker": "D:0:0:{5920C867-0C94-434F-AEE8-BA9D8B7A0F9E}|RaspberryHut\\RaspberryHut.Android\\RaspberryHut.Android.csproj|solutionrelative:raspberryhut\\raspberryhut.android\\properties\\androidmanifest.xml||{4E01A4BC-CFCF-452C-8C08-51352512D197}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5920C867-0C94-434F-AEE8-BA9D8B7A0F9E}|RaspberryHut\\RaspberryHut.Android\\RaspberryHut.Android.csproj|C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\raspberryhut\\raspberryhut.android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5920C867-0C94-434F-AEE8-BA9D8B7A0F9E}|RaspberryHut\\RaspberryHut.Android\\RaspberryHut.Android.csproj|solutionrelative:raspberryhut\\raspberryhut.android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\raspberryhut.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\raspberryhut.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5920C867-0C94-434F-AEE8-BA9D8B7A0F9E}|RaspberryHut\\RaspberryHut.Android\\RaspberryHut.Android.csproj|C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\raspberryhut\\raspberryhut.android\\customentryrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5920C867-0C94-434F-AEE8-BA9D8B7A0F9E}|RaspberryHut\\RaspberryHut.Android\\RaspberryHut.Android.csproj|solutionrelative:raspberryhut\\raspberryhut.android\\customentryrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\converters\\winddirconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\converters\\winddirconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\converters\\waterconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\converters\\waterconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\converters\\lightsconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\converters\\lightsconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\converters\\cleanerstateconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\converters\\cleanerstateconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\converters\\cleanermodeconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\converters\\cleanermodeconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\models\\water.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\models\\water.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\models\\lights.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\models\\lights.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\models\\controlwater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\models\\controlwater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\models\\controltemperature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\models\\controltemperature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\models\\controllights.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\models\\controllights.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\models\\controlgate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\models\\controlgate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\models\\controlcleaner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\models\\controlcleaner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\models\\cleaner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\models\\cleaner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\views\\water.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\views\\water.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\views\\meteostation.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\views\\meteostation.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\views\\lights.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\views\\lights.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\views\\irrigation.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\views\\irrigation.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\viewmodels\\waterviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\viewmodels\\waterviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\viewmodels\\lightsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\viewmodels\\lightsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\viewmodels\\cleanerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\viewmodels\\cleanerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04A2FEA2-2815-4A41-A625-8DF2C72CF21A}|RaspberryHut\\RaspberryHut.iOS\\RaspberryHut.iOS.csproj|C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\raspberryhut\\raspberryhut.ios\\appdelegate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04A2FEA2-2815-4A41-A625-8DF2C72CF21A}|RaspberryHut\\RaspberryHut.iOS\\RaspberryHut.iOS.csproj|solutionrelative:raspberryhut\\raspberryhut.ios\\appdelegate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5920C867-0C94-434F-AEE8-BA9D8B7A0F9E}|RaspberryHut\\RaspberryHut.Android\\RaspberryHut.Android.csproj|C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\raspberryhut\\raspberryhut.android\\resources\\drawable\\settings.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{5920C867-0C94-434F-AEE8-BA9D8B7A0F9E}|RaspberryHut\\RaspberryHut.Android\\RaspberryHut.Android.csproj|solutionrelative:raspberryhut\\raspberryhut.android\\resources\\drawable\\settings.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|c:\\users\\tomik\\onedrive\\plocha\\rocnikovka\\mobileapp\\raspberryhut\\raspberryhut\\raspberryhut\\services\\locationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA57240-412F-4200-A5BE-F5FB812A6D8F}|RaspberryHut\\RaspberryHut\\RaspberryHut.csproj|solutionrelative:raspberryhut\\raspberryhut\\services\\locationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5920C867-0C94-434F-AEE8-BA9D8B7A0F9E}|RaspberryHut\\RaspberryHut.Android\\RaspberryHut.Android.csproj|C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\raspberryhut\\raspberryhut.android\\resources\\resource.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5920C867-0C94-434F-AEE8-BA9D8B7A0F9E}|RaspberryHut\\RaspberryHut.Android\\RaspberryHut.Android.csproj|solutionrelative:raspberryhut\\raspberryhut.android\\resources\\resource.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5920C867-0C94-434F-AEE8-BA9D8B7A0F9E}|RaspberryHut\\RaspberryHut.Android\\RaspberryHut.Android.csproj|C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\raspberryhut\\raspberryhut.android\\resources\\values\\styles.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5920C867-0C94-434F-AEE8-BA9D8B7A0F9E}|RaspberryHut\\RaspberryHut.Android\\RaspberryHut.Android.csproj|solutionrelative:raspberryhut\\raspberryhut.android\\resources\\values\\styles.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5920C867-0C94-434F-AEE8-BA9D8B7A0F9E}|RaspberryHut\\RaspberryHut.Android\\RaspberryHut.Android.csproj|C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\raspberryhut\\raspberryhut.android\\resources\\values\\colors.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5920C867-0C94-434F-AEE8-BA9D8B7A0F9E}|RaspberryHut\\RaspberryHut.Android\\RaspberryHut.Android.csproj|solutionrelative:raspberryhut\\raspberryhut.android\\resources\\values\\colors.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\obj\\Debug\\netstandard2.0\\App.xaml.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RaspberryHut\\RaspberryHut\\obj\\Debug\\netstandard2.0\\App.xaml.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 241,
+          "SelectedChildIndex": 17,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DatabaseService.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Services\\DatabaseService.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Services\\DatabaseService.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Services\\DatabaseService.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Services\\DatabaseService.cs",
+              "ViewState": "AgIAALEAAAAAAAAAAAAYwO8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T20:06:14.518Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\App.xaml.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\App.xaml.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\App.xaml.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAowBQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T20:28:34.288Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\AppShell.xaml",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\AppShell.xaml",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\AppShell.xaml",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\AppShell.xaml",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGQAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-07T21:05:56.953Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MainActivity.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut.Android\\MainActivity.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut.Android\\MainActivity.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut.Android\\MainActivity.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut.Android\\MainActivity.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAwwNAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T09:36:10.987Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "RaspberryHut.csproj",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\RaspberryHut.csproj",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\RaspberryHut.csproj",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\RaspberryHut.csproj",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\RaspberryHut.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-13T23:17:27.74Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "LocationService.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Services\\LocationService.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Services\\LocationService.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Services\\LocationService.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Services\\LocationService.cs",
+              "ViewState": "AQIAABkAAABAMzMzMzMrwDUAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T19:04:42.164Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Cleaner.xaml",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Cleaner.xaml",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Views\\Cleaner.xaml",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Cleaner.xaml",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Views\\Cleaner.xaml",
+              "ViewState": "AgIAADYAAABgZmZmZmYkwEQAAACLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-15T19:27:16.59Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Cleaner.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Cleaner.xaml.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Views\\Cleaner.xaml.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Cleaner.xaml.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Views\\Cleaner.xaml.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAApwCAAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T13:43:32.565Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "CleanerViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\ViewModels\\CleanerViewModel.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\ViewModels\\CleanerViewModel.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\ViewModels\\CleanerViewModel.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\ViewModels\\CleanerViewModel.cs",
+              "ViewState": "AQIAAJkAAAAAAAAAAAAqwJEAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T11:20:06.079Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Meteostation.xaml",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Meteostation.xaml",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Views\\Meteostation.xaml",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Meteostation.xaml",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Views\\Meteostation.xaml",
+              "ViewState": "AQIAAFUAAAAAAAAAAADwv1oAAACJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-28T19:47:57.735Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Meteostation.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Meteostation.xaml.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Views\\Meteostation.xaml.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Meteostation.xaml.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Views\\Meteostation.xaml.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAIwBsAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T11:42:20.839Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Gate.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Models\\Gate.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Models\\Gate.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Models\\Gate.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Models\\Gate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T19:31:12.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Temperature.xaml",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Temperature.xaml",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Views\\Temperature.xaml",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Temperature.xaml",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Views\\Temperature.xaml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAMAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-28T19:49:03.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TemperatureViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\ViewModels\\TemperatureViewModel.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\ViewModels\\TemperatureViewModel.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\ViewModels\\TemperatureViewModel.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\ViewModels\\TemperatureViewModel.cs",
+              "ViewState": "AgIAACcBAAAAAAAAAAAIwDEBAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T18:31:27.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Temperature.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Models\\Temperature.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Models\\Temperature.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Models\\Temperature.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Models\\Temperature.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T07:43:14.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Meteostation.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Models\\Meteostation.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Models\\Meteostation.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Models\\Meteostation.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Models\\Meteostation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T07:43:04.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MeteostationVewModel.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\ViewModels\\MeteostationVewModel.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\ViewModels\\MeteostationVewModel.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\ViewModels\\MeteostationVewModel.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\ViewModels\\MeteostationVewModel.cs",
+              "ViewState": "AgIAACQCAAAAAAAAAAAowCsCAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T18:28:14.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Gate.xaml",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Gate.xaml",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Views\\Gate.xaml",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Gate.xaml",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Views\\Gate.xaml",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwPSsAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-28T19:45:34.316Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IrrigationViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\ViewModels\\IrrigationViewModel.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\ViewModels\\IrrigationViewModel.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\ViewModels\\IrrigationViewModel.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\ViewModels\\IrrigationViewModel.cs",
+              "ViewState": "AgIAAJ4AAAAAzszMzMwowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T07:37:07.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GateViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\ViewModels\\GateViewModel.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\ViewModels\\GateViewModel.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\ViewModels\\GateViewModel.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\ViewModels\\GateViewModel.cs",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAYwLYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T09:47:08.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GateConverter.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Converters\\GateConverter.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Converters\\GateConverter.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Converters\\GateConverter.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Converters\\GateConverter.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T07:44:12.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\AppShell.xaml.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\AppShell.xaml.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\AppShell.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T18:50:28.85Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Water.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Models\\Water.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Models\\Water.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Models\\Water.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Models\\Water.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T07:43:24.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\App.xaml",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\App.xaml",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\App.xaml",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\App.xaml",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-11T07:44:59.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Temperature.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Temperature.xaml.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Views\\Temperature.xaml.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Temperature.xaml.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Views\\Temperature.xaml.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAArwIQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T12:40:33.828Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AndroidManifest.xml",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut.Android\\Properties\\AndroidManifest.xml",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut.Android\\Properties\\AndroidManifest.xml",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut.Android\\Properties\\AndroidManifest.xml",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut.Android\\Properties\\AndroidManifest.xml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-06-11T07:45:47.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Lights.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Lights.xaml.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Views\\Lights.xaml.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Lights.xaml.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Views\\Lights.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T23:31:30.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Water.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Water.xaml.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Views\\Water.xaml.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Water.xaml.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Views\\Water.xaml.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAADwvyAAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T23:34:48.904Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Gate.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Gate.xaml.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Views\\Gate.xaml.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Gate.xaml.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Views\\Gate.xaml.cs",
+              "ViewState": "AgIAAA0AAAAAMzMzMzMZwCAAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T13:47:09.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "RaspberryHut",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\RaspberryHut.csproj",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\RaspberryHut.csproj",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\RaspberryHut.csproj",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\RaspberryHut.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-30T10:12:20.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "LightsConverter.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Converters\\LightsConverter.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Converters\\LightsConverter.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Converters\\LightsConverter.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Converters\\LightsConverter.cs",
+              "ViewState": "AQIAAAkAAABgZmZmZmYkwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T07:44:20.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "WaterConverter.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Converters\\WaterConverter.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Converters\\WaterConverter.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Converters\\WaterConverter.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Converters\\WaterConverter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T07:44:29.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "WindDirConverter.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Converters\\WindDirConverter.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Converters\\WindDirConverter.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Converters\\WindDirConverter.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Converters\\WindDirConverter.cs",
+              "ViewState": "AQIAABQAAADAzMzMzMwmwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T07:44:35.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CustomEntryRenderer.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut.Android\\CustomEntryRenderer.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut.Android\\CustomEntryRenderer.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut.Android\\CustomEntryRenderer.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut.Android\\CustomEntryRenderer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T07:46:00.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Lights.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Models\\Lights.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Models\\Lights.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Models\\Lights.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Models\\Lights.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T07:42:53.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ControlWater.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Models\\ControlWater.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Models\\ControlWater.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Models\\ControlWater.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Models\\ControlWater.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T07:42:34.578Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ControlTemperature.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Models\\ControlTemperature.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Models\\ControlTemperature.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Models\\ControlTemperature.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Models\\ControlTemperature.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T07:42:25.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "CleanerModeConverter.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Converters\\CleanerModeConverter.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Converters\\CleanerModeConverter.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Converters\\CleanerModeConverter.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Converters\\CleanerModeConverter.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBoAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T02:26:35.102Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CleanerStateConverter.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Converters\\CleanerStateConverter.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Converters\\CleanerStateConverter.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Converters\\CleanerStateConverter.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Converters\\CleanerStateConverter.cs",
+              "ViewState": "AQIAAA0AAACgmZmZmZklwA8AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T02:30:29.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ControlLights.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Models\\ControlLights.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Models\\ControlLights.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Models\\ControlLights.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Models\\ControlLights.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T07:42:13.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ControlGate.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Models\\ControlGate.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Models\\ControlGate.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Models\\ControlGate.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Models\\ControlGate.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T07:41:13.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ControlCleaner.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Models\\ControlCleaner.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Models\\ControlCleaner.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Models\\ControlCleaner.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Models\\ControlCleaner.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T07:41:11.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "WaterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\ViewModels\\WaterViewModel.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\ViewModels\\WaterViewModel.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\ViewModels\\WaterViewModel.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\ViewModels\\WaterViewModel.cs",
+              "ViewState": "AQIAAH8AAAAAlJmZmZkJwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T07:38:14.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "LightsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\ViewModels\\LightsViewModel.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\ViewModels\\LightsViewModel.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\ViewModels\\LightsViewModel.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\ViewModels\\LightsViewModel.cs",
+              "ViewState": "AQIAANwAAAAA+v////8TwO0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T07:37:19.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Lights.xaml",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Lights.xaml",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Views\\Lights.xaml",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Lights.xaml",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Views\\Lights.xaml",
+              "ViewState": "AQIAAEkAAAAAMzMzMzMbwEAAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-28T19:47:22.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Irrigation.xaml",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Irrigation.xaml",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Views\\Irrigation.xaml",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Irrigation.xaml",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Views\\Irrigation.xaml",
+              "ViewState": "AQIAAG4AAAAANDMzMzMLwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-10T18:03:18.248Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Cleaner.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Models\\Cleaner.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Models\\Cleaner.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Models\\Cleaner.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Models\\Cleaner.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T01:16:18.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Water.xaml",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Water.xaml",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\Views\\Water.xaml",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\Views\\Water.xaml",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\Views\\Water.xaml",
+              "ViewState": "AQIAAC0AAAAAAgAAAADwvyEAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-28T19:48:01.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "BaseViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\ViewModels\\BaseViewModel.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\ViewModels\\BaseViewModel.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\ViewModels\\BaseViewModel.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\ViewModels\\BaseViewModel.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAIBJwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T07:36:08.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "styles.xml",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut.Android\\Resources\\values\\styles.xml",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut.Android\\Resources\\values\\styles.xml",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut.Android\\Resources\\values\\styles.xml",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut.Android\\Resources\\values\\styles.xml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-06-08T09:33:10.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "colors.xml",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut.Android\\Resources\\values\\colors.xml",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut.Android\\Resources\\values\\colors.xml",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut.Android\\Resources\\values\\colors.xml",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut.Android\\Resources\\values\\colors.xml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-06-08T09:32:49.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "AppDelegate.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut.iOS\\AppDelegate.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut.iOS\\AppDelegate.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut.iOS\\AppDelegate.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut.iOS\\AppDelegate.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T18:49:30.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Resource.designer.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut.Android\\Resources\\Resource.designer.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut.Android\\Resources\\Resource.designer.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut.Android\\Resources\\Resource.designer.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut.Android\\Resources\\Resource.designer.cs",
+              "ViewState": "AQIAABIBAAAAAAAAAAAjwCUBAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T09:33:44.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "settings.png - PNG [1000x1000, 32 bit\u016F, PNG]",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut.Android\\Resources\\drawable\\settings.png",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut.Android\\Resources\\drawable\\settings.png",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut.Android\\Resources\\drawable\\settings.png - PNG [1000x1000, 32 bit\u016F, PNG]",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut.Android\\Resources\\drawable\\settings.png - PNG [1000x1000, 32 bit\u016F, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2024-06-10T17:02:07.578Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "App.xaml.g.cs",
+              "DocumentMoniker": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\obj\\Debug\\netstandard2.0\\App.xaml.g.cs",
+              "RelativeDocumentMoniker": "RaspberryHut\\RaspberryHut\\obj\\Debug\\netstandard2.0\\App.xaml.g.cs",
+              "ToolTip": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\RaspberryHut\\RaspberryHut\\RaspberryHut\\obj\\Debug\\netstandard2.0\\App.xaml.g.cs",
+              "RelativeToolTip": "RaspberryHut\\RaspberryHut\\obj\\Debug\\netstandard2.0\\App.xaml.g.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T11:06:40.324Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

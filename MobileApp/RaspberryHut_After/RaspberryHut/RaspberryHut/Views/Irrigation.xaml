@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="RaspberryHut.Views.Irrigation"
+            xmlns:vm="clr-namespace:RaspberryHut.ViewModels"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
+            xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            BarBackgroundColor="{StaticResource Primary}"
+            SelectedTabColor="ivory"
+            Style="{d:StaticResource TabStyle}"
+            Title="Světla">
+
+    <TabbedPage.BindingContext>
+        <vm:LightsViewModel/>
+    </TabbedPage.BindingContext>
+
+    <TabbedPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="TabbedPageTitleStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="1" />
+            </Style>
+        </ResourceDictionary>
+    </TabbedPage.Resources>
+    <ContentPage Title="Ovládání"  BackgroundColor="{AppThemeBinding Light={StaticResource WindowColor}, Dark={StaticResource WindowColorDark}}" IconImageSource="controlsIco.png">
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <StackLayout Margin="0, 30" >
+                <Label Style="{StaticResource TextHeader}" TextColor="{DynamicResource TextColor}">Čas spuštění</Label>
+                <TimePicker Format="HH:mm" Time="{Binding StartTime, Mode=TwoWay}" PropertyChanged="OnTimeChanged" Style="{StaticResource TimePicker}" TextColor="{DynamicResource TextColor}"/>
+            </StackLayout>
+            <StackLayout Margin="0, 30">
+                <Label Style="{StaticResource TextHeader}" TextColor="{DynamicResource TextColor}">Čas vypnutí</Label>
+                <TimePicker Format="HH:mm" Time="{Binding EndTime, Mode=TwoWay}" PropertyChanged="OnTimeChanged" Style="{StaticResource TimePicker}" TextColor="{DynamicResource TextColor}"/>
+            </StackLayout>
+            <StackLayout Margin="0, 30">
+                <Label Style="{StaticResource TextHeader}" TextColor="{DynamicResource TextColor}">Zapnout interval</Label>
+                <Switch x:Name="IntervalSwitch"  HorizontalOptions="Center" VerticalOptions="Center" IsToggled="{Binding IntervalState}" Toggled="Switch_Toggled"/>
+            </StackLayout>
+            <BoxView HeightRequest="2" WidthRequest="270" BackgroundColor="Gray" Margin="0, 20, 0, 0" HorizontalOptions="Center"/>
+            <StackLayout Margin="0, 30">
+                <Label Style="{StaticResource TextHeader}" TextColor="{DynamicResource TextColor}">Zapnout zavlažování</Label>
+                <Switch x:Name="IrrigationsSwitch"  HorizontalOptions="Center" VerticalOptions="Center" IsToggled="{Binding IrrigationState}" Toggled="Switch_Toggled"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Zobrazení" BackgroundColor="{AppThemeBinding Light={StaticResource WindowColor}, Dark={StaticResource WindowColorDark}}" IconImageSource="chartIco.png">
+        <ScrollView>
+            <StackLayout Margin="10" VerticalOptions="Start" HorizontalOptions="Center">
+                <Label Margin="0, 0, 0, 0" FontSize="20" HorizontalTextAlignment="Center" TextColor="{DynamicResource TextColor}">Teplota</Label>
+                <microcharts:ChartView x:Name="ChartTemperature" Chart="{Binding LivChart}" HeightRequest="200" WidthRequest="380" />
+
+                <Label Margin="0, 10, 0, 0" FontSize="20" HorizontalTextAlignment="Center" TextColor="{DynamicResource TextColor}">Vlhkost vzduchu</Label>
+                <microcharts:ChartView x:Name="ChartAirHumidity" Chart="{Binding BathChart}" HeightRequest="200" WidthRequest="380" />
+
+                <Label Margin="0, 10, 0, 0" FontSize="20" HorizontalTextAlignment="Center" TextColor="{DynamicResource TextColor}">Vlhkost půdy</Label>
+                <microcharts:ChartView x:Name="ChartSoilHumidity" Chart="{Binding CellarChart}" HeightRequest="200" WidthRequest="380" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage Title="I/O" BackgroundColor="{AppThemeBinding Light={StaticResource WindowColor}, Dark={StaticResource WindowColorDark}}" IconImageSource="squareListIco.png">
+        <ListView Style="{StaticResource ListViewStyle}" x:Name="IrrigationListView" ItemsSource="{Binding ListIrrigation}" Refreshing="RefreshListView" >
+            <ListView.Header>
+                <Grid Margin="0,0,0,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Style="{StaticResource ListViewHeaderText}" Text="Stav" Grid.Column="0" TextColor="{DynamicResource TextColor}"/>
+                    <Label Style="{StaticResource ListViewHeaderText}" Text="Datum" Grid.Column="1" TextColor="{DynamicResource TextColor}"/>
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text ="{Binding State_, Converter={StaticResource LightsConverter}}" HorizontalOptions="Fill" HorizontalTextAlignment="Center" Margin="1" TextColor="{DynamicResource TextColor}"></Label>
+                            <Label Grid.Column="1" Text ="{Binding Date, StringFormat='{0:HH:mm dd-MM-yy}'}" HorizontalOptions="Fill" HorizontalTextAlignment="Center" Margin="2" TextColor="{DynamicResource TextColor}"></Label>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage>
+    <!--content page s litem s naměřenými údaji-->
+    <ContentPage Title="" BackgroundColor="{AppThemeBinding Light={StaticResource WindowColor}, Dark={StaticResource WindowColorDark}}" IconImageSource="squareListIco.png">
+        <ListView Style="{StaticResource ListViewStyle}" x:Name="GreenhouseListView" ItemsSource="{Binding ListGreenhouse}" Refreshing="RefreshListView" >
+            <ListView.Header>
+                <Grid Margin="0,0,0,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Style="{StaticResource ListViewHeaderText}" Text="Teplota" Grid.Column="0" TextColor="{DynamicResource TextColor}"/>
+                    <Label Style="{StaticResource ListViewHeaderText}" Text="Vlhokst vzduchu" Grid.Column="1" TextColor="{DynamicResource TextColor}"/>
+                    <Label Style="{StaticResource ListViewHeaderText}" Text="Vlhkost půdy" Grid.Column="2" TextColor="{DynamicResource TextColor}"/>
+                    <Label Style="{StaticResource ListViewHeaderText}" Text="Datum" Grid.Column="3" TextColor="{DynamicResource TextColor}"/>
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text ="{Binding Temp}"  HorizontalOptions="Fill" HorizontalTextAlignment="Center" Margin="1" TextColor="{DynamicResource TextColor}"></Label>
+                            <Label Grid.Column="1" Text ="{Binding AirHum}"  HorizontalOptions="Fill" HorizontalTextAlignment="Center" Margin="1" TextColor="{DynamicResource TextColor}"></Label>
+                            <Label Grid.Column="2" Text ="{Binding SoilHum}"  HorizontalOptions="Fill" HorizontalTextAlignment="Center" Margin="1" TextColor="{DynamicResource TextColor}"></Label>
+                            <Label Grid.Column="3" Text ="{Binding Date, StringFormat='{0:HH:mm dd-MM-yy}'}" HorizontalOptions="Fill" HorizontalTextAlignment="Center" Margin="2" TextColor="{DynamicResource TextColor}"></Label>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage>
+</TabbedPage>

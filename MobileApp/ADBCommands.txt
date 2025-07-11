@@ -1,0 +1,2 @@
+adb pair <ip:port>
+adb connect <ip>

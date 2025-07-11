@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "C4kTUhVUejRWj6vlbBW0P2j/Y5FrS154g8YPCCKQH3cFWZx6gHy6vy8CVUzekiRfCut9bYletKr+YNzJhCh/2w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\tomik\\OneDrive\\Plocha\\Rocnikovka\\MobileApp\\secondTry\\secondTry\\secondTry.iOS\\secondTry.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tomik\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\tomik\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\tomik\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}

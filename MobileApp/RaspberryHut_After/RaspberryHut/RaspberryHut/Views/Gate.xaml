@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage 
+             BarBackgroundColor="{StaticResource Primary}"
+            Title="Brána"           
+            xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RaspberryHut.Views.Gate"
+            xmlns:vm="clr-namespace:RaspberryHut.ViewModels"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
+            xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            Style="{StaticResource TabStyle}">
+
+    <ContentPage Title="Ovládání" BackgroundColor="{AppThemeBinding Light={StaticResource WindowColor}, Dark={StaticResource WindowColorDark}}" IconImageSource="controlsIco.png">
+        <StackLayout>
+            <Label Text="{Binding State}" TextColor="{StaticResource Primary}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Margin="0, 20, 0, 0" FontSize="50" FontAttributes="Bold"/>
+            <Label Text="{Binding LastState}" TextColor="{StaticResource Primary}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Margin="0, 20, 0, 0" FontSize="40" FontAttributes="Bold"/>
+            <StackLayout Orientation="Horizontal" Margin="10, 0, 10, 100" HorizontalOptions="Center" VerticalOptions="EndAndExpand" BackgroundColor="#333" Padding="12">
+                <Button  Text="Otevřít" Style="{StaticResource SegmentedButtons}" Clicked="ButtonClicked" CommandParameter='1'/>
+                <Button Text="Zavřít" Style="{StaticResource SegmentedButtons}" Clicked="ButtonClicked" CommandParameter='2'/>
+                <Button Text="Zastavit" Style="{StaticResource SegmentedButtons}" Clicked="ButtonClicked" CommandParameter='0'/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="List" BackgroundColor="{AppThemeBinding Light={StaticResource WindowColor}, Dark={StaticResource WindowColorDark}}" Style="{StaticResource ListViewStyle}" IconImageSource="squareListIco.png">
+        <ListView ItemsSource="{Binding ListGate}" Style="{StaticResource ListViewStyle}" Refreshing="RefreshListView" x:Name="GateList">
+            <ListView.Header>
+                <Grid Margin="0,0,0,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Style="{StaticResource ListViewHeaderText}" Text="Status" Grid.Column="0" TextColor="{DynamicResource TextColor}"/>
+                    <Label Style="{StaticResource ListViewHeaderText}" Text="Datum" Grid.Column="1" TextColor="{DynamicResource TextColor}"/>
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text ="{Binding States, Converter={StaticResource GateConverter}}" VerticalTextAlignment="Center" HorizontalOptions="Fill" HorizontalTextAlignment="Center" Margin="1" TextColor="{DynamicResource TextColor}"></Label>
+                            <Label Grid.Column="1" Text ="{Binding Date, StringFormat='{0:HH:mm dd-MM-yy}'}" VerticalTextAlignment="Center" HorizontalOptions="Fill" HorizontalTextAlignment="Center" Margin="1" TextColor="{DynamicResource TextColor}"></Label>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage>
+</TabbedPage>
