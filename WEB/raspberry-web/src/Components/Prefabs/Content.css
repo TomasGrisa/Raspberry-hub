@@ -1,0 +1,273 @@
+
+
+.CContainer{
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 49.9% 0.2% 49.9%;
+    text-align: center;
+    overflow: hidden; 
+}
+
+
+.CControls{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    flex: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.CControls:hover{
+    transition: 0.3s ease;
+    background-color: #333;
+}
+
+
+.Splitter{
+    flex: 1;
+    height: 95%;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.199), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.199));
+    transform: translateY(2.5%);
+    border-radius: 10px;
+}
+
+
+.SignOut{
+    height: 100px;
+    width: 150px;
+    background-color: #00af06;
+    border-radius: 5px solid white;
+    color: white;
+    font-size: 2rem;
+}
+
+/* 
+Prefabs
+*/
+
+
+
+.CheckBox{
+    height: 100%;
+    width: 100%;
+    /* transform: scale(2); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-container {
+    max-height: 68vh; /* You can adjust the height as needed */
+    overflow-y: auto; /* Adds a scrollbar to the table */
+    /* border: 1px solid #ddd; */
+    /* background-color: #151515; */
+    text-align: center;
+    /* border: 1px solid yellow; */;
+}
+
+/* Styling for the table */
+.dynamic-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(23, 23, 23);
+    /* background-color: transparent; */
+    text-align: center;
+    overflow-y: hidden;
+    border: none;
+}
+
+.dynamic-table th, .dynamic-table td {
+    text-align: left;
+    text-align: center;
+}
+
+.dynamic-table thead{
+    position: sticky;
+    top: 0; /* Keep the entire header at the top */
+    z-index: 2;
+}
+
+.dynamic-table th {
+    padding: 10px;
+    font-size: clamp(0.1rem, 1vw, 1rem);
+    background-color: #000000;
+    white-space: nowrap;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+/* .dynamic-table thead tr:nth-child(2) th {
+z-index: 1;
+} */
+
+.dynamic-table td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    font-size: clamp(0.1rem, 1vw, 1rem);
+    height: 1vh;
+}
+  
+/* Optional: Add hover effect on rows */
+.dynamic-table tr:hover {
+background-color: #f1f1f1;
+}
+
+.Switch {
+    position: relative;
+    display: inline-block;
+    height: 20%;
+    aspect-ratio: 2/1;
+    margin-bottom: 5%;
+  }
+  
+  .Switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .Slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #a9a9a9;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .Slider:before {
+    position: absolute;
+    content: "";
+    height: 80%;
+    aspect-ratio: 1/1;
+    left: 5%;
+    bottom: 10%;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .SwitchInput:checked + .Slider {
+    background-color: #00af06;
+  }
+  
+  .SwitchInput:focus + .Slider {
+    box-shadow: 0 0 1px #00af06;
+  }
+  
+  .SwitchInput:checked + .Slider:before {
+    /* -webkit-transform: translateX(200%);
+    -ms-transform: translateX(200%); */
+    transform: translateX(120%);
+  }
+
+.Slider.Round {
+    border-radius: 34px;
+  }
+  
+  .Slider.Round:before {
+    border-radius: 50%;
+  }
+
+
+
+  .TempCList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;    
+    display: grid;
+    grid-template-rows: 15% 85%;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-50%);
+    position: relative;
+    left: 50%;
+}
+
+.TempCList:hover{
+    transition: 0.3s ease;
+    background-color: #333;
+}
+
+.ListHeader{
+    height: 40%;
+}
+
+.ListTool{
+height: 100%;
+width: 100%;
+display: grid;
+grid-template-rows: 1fr 1fr;
+}
+
+.ListTool input{
+    height: 50%;
+    width: 60%;
+    /* font-size: 1.5rem; */
+    /* margin: 2%; */
+}
+
+.Dates{
+    height: 100%;
+    width: 100%;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+.SearchContainer{
+    height: 100%;
+    width: 100%;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+/* .DateFrom{
+
+}
+
+.DateTo{
+
+}
+
+.RowCount{
+
+}*/
+
+.Search{
+    border-radius: 5px;
+    background-color: #00af06;
+    color: white;
+    border: none;
+    transition: 0.3s ease;
+} 
+
+.Search:hover{
+    background-color: #028a07;
+    color: white;
+}
+
+.Graph{
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}

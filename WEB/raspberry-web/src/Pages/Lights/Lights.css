@@ -1,0 +1,22 @@
+.Control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.ControlFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 80%;
+    flex-direction: column;
+    gap: 10%
+}
+
+.State{
+    font-size: 3vb;
+}
+

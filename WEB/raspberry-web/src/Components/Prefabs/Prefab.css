@@ -1,0 +1,101 @@
+    .Light {
+      color: black;
+    }
+
+
+    .DarkMode {
+      float: right;
+    }
+
+
+    .Content-container {
+      flex: 1;
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #222;
+      position: relative;
+      transition: 0.3s ease;
+      overflow: auto;
+      scrollbar-width: none;
+    }
+
+    .Content-container-light {
+      background-color: #dddddd;
+    }
+
+    .Content {
+      height: 90%;
+      width: 95vw;
+      /* background-color: rgb(42, 42, 42); */
+      /* outline: solid 5px; */
+      /* outline-color: rgb(231, 231, 231); */
+      /* border-radius: 5vh; */
+      margin: 5vw;
+      /* overflow: hidden; */
+    }
+
+    .Content-light {
+      background-color: white;
+      /* outline-color: rgb(64, 64, 64); */
+    }
+
+    .Swipe {
+      position: absolute;
+      left: 50%;
+      height: 100%;
+      transform: translateX(-50%);
+      width: 4%;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    .Swipe img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+      display: none;
+    }
+
+    .Swipe:hover {
+      background-color: #1117;
+    }
+
+    .Swipe:hover img {
+      display: block;
+    }
+
+
+    .Inputs {
+      text-align: center;
+      height: 25%;
+      width: 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #222;
+      color: white;
+      font-size: 2.5vb;
+      border-radius: 5px;
+      gap: 0;
+    }
+
+    /* .leaflet-container {
+      transform: none !important;
+    }
+
+    .leaflet-container:focus {
+      outline: none;
+    }
+
+    .leaflet-container img {
+      max-width: none !important;
+    } */
+
+    .leaflet-container {
+      width: 100%;
+      height: 100%;
+    }
