@@ -1,0 +1,75 @@
+// TOP-LEVEL build.gradle file (your_flutter_project/android/build.gradle)
+
+buildscript {
+    // THIS IS THE KEY: Set your Kotlin version here to something >= 1.5.20.
+    // Your current '1.9.22' is fine, but make sure it's here.
+    ext.kotlin_version = '1.9.22' // Ensure this line exists and is >= 1.5.20
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // IMPORTANT: Ensure this is AGP 8.0.0 or higher.
+        // Your current '8.2.1' is okay for now, but consider upgrading to 8.3.0+
+        // as per the warning you received.
+        classpath 'com.android.tools.build:gradle:8.4.2' // Or '8.3.0' or newer
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    // NEW BLOCK: Force Kotlin Gradle Plugin version for all configurations
+    configurations.all {
+        resolutionStrategy {
+            // Force the Kotlin Gradle plugin version to the one defined at the root
+            force "org.jetbrains.kotlin:kotlin-gradle-plugin:$rootProject.ext.kotlin_version"
+        }
+    }
+}
+
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+
+// Keep the namespace fix, it's still good.
+subprojects {
+    afterEvaluate { project ->
+        if (project.plugins.hasPlugin("com.android.application") || project.plugins.hasPlugin("com.android.library")) {
+            if (project.hasProperty('android')) {
+                def android = project.extensions.android
+                if (android != null && (android.namespace == null || android.namespace.isEmpty())) {
+                    android.namespace = "com.example.flutter.${project.name.replace('-', '_')}"
+                    println "Warning: Added missing namespace for subproject '${project.name}': ${android.namespace}"
+                }
+            }
+        }
+    }
+}
+
+// Remove the previous 'subprojects' block that was trying to set kotlin_version via extraProperties.
+// This new `configurations.all` approach is more direct.
+/*
+subprojects {
+    afterEvaluate { project ->
+        if (project.plugins.hasPlugin("kotlin-android")) {
+            project.extensions.extraProperties.set("kotlin_version", rootProject.ext.kotlin_version)
+        }
+    }
+}
+*/
+
+
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
