@@ -56,6 +56,87 @@ app.get('/data', async (req, res) => {
 
 // #region Temperature data
 
+
+// To try
+// app.get('/GetTempDataSmart', async (req, res) => {
+//   const { startDate, endDate, requestedCount } = req.query;
+
+//   try {
+//     // Query 1: Get total count in date range
+//     const countQuery = `
+//       SELECT COUNT(*) as total 
+//       FROM temperature_data 
+//       WHERE date_ BETWEEN $1 AND $2
+//     `;
+//     const countResult = await pool.query(countQuery, [startDate, endDate]);
+//     const totalCount = parseInt(countResult.rows[0].total);
+
+//     // Query 2: Decide strategy based on count
+//     if (totalCount <= requestedCount) {
+//       // Return all items - simple query
+//       const allDataQuery = `
+//         SELECT * FROM temperature_data 
+//         WHERE date_ BETWEEN $1 AND $2 
+//         ORDER BY date_ ASC
+//       `;
+//       const allData = await pool.query(allDataQuery, [startDate, endDate]);
+
+//       return res.json({
+//         items: allData.rows,
+//         totalCount: totalCount,
+//         wasSampled: false,
+//         message: `Showing all ${totalCount} records`
+//       });
+//     }
+
+//     // Query 3: Smart sampling - get evenly spaced items
+//     const interval = Math.floor(totalCount / requestedCount);
+//     const sampledQuery = `
+//       SELECT * FROM (
+//         SELECT *, ROW_NUMBER() OVER (ORDER BY date_) as rn
+//         FROM temperature_data 
+//         WHERE date_ BETWEEN $1 AND $2
+//       ) numbered
+//       WHERE rn % $3 = 0
+//       ORDER BY date_ ASC
+//       LIMIT $4
+//     `;
+
+//     const sampledData = await pool.query(sampledQuery, [
+//       startDate, 
+//       endDate, 
+//       interval, 
+//       requestedCount
+//     ]);
+
+//     return res.json({
+//       items: sampledData.rows,
+//       totalCount: totalCount,
+//       wasSampled: true,
+//       message: `Showing ${sampledData.rows.length} of ${totalCount} records (sampled)`
+//     });
+
+//   } catch (error) {
+//     console.error('Smart sampling failed:', error);
+
+//     // Fallback: Return recent N items
+//     const fallbackQuery = `
+//       SELECT * FROM temperature_data 
+//       ORDER BY date_ DESC 
+//       LIMIT $1
+//     `;
+//     const fallbackData = await pool.query(fallbackQuery, [requestedCount]);
+
+//     return res.json({
+//       items: fallbackData.rows.reverse(), // Reverse to show chronologically
+//       totalCount: fallbackData.rows.length,
+//       wasSampled: false,
+//       message: `Fallback: Showing ${fallbackData.rows.length} most recent records`,
+//       error: 'Date filtering failed, showing recent data'
+//     });
+//   }
+// });
+
 app.get('/newestTemp', async (req, res) => {
   try {
     const result = await pool.query('SELECT * FROM Temperature ORDER BY id DESC LIMIT 1;');
