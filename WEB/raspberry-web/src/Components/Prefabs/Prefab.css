@@ -83,6 +83,31 @@
       gap: 0;
     }
 
+    /* Fix date input calendar icon visibility */
+    .Inputs[type="date"] {
+      color-scheme: dark;
+      background-color: #333;
+    }
+
+    /* Fix number input styling */
+    .Inputs[type="number"] {
+      background-color: #333;
+      color: white;
+    }
+
+    /* Light mode date input styling */
+    .Content-light .Inputs[type="date"] {
+      color-scheme: light;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    /* Light mode number input styling */
+    .Content-light .Inputs[type="number"] {
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
     /* .leaflet-container {
       transform: none !important;
     }

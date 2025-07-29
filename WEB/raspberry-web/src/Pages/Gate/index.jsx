@@ -206,7 +206,7 @@ function Gate() {
     }
 
     return (
-      <div className="GateContainer">
+      <div className={`GateContainer${isLightMode === true ? " light" : ""}`}>
         <h2 className="GridHeader"></h2>
         <div className="GateGrid">
           <div className="GateState"><div>{ControlStateInterpreter(controlState)}</div></div>

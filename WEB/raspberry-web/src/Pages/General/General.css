@@ -21,7 +21,7 @@
 }
 
 .GeneralContainer.light {
-  background-color: #bcbcbc;
+  background-color: #f0f0f0;
 }
 
 /* .GeneralHeader{
@@ -36,7 +36,7 @@
   height: 80%;
   width: 90%;
   display: grid;
-  grid-template-columns: 15% 15% 70%;
+  grid-template-columns: 17.5% 17.5% 65%;
   grid-template-rows: 1fr;
   overflow: visible;
 }
@@ -114,6 +114,18 @@
   z-index: 2;
 }
 
+/* Light mode styling for external links */
+.GridItem.light .ExternalLink {
+  color: #333;
+}
+
+/* MeteoContainer specific external link - smaller size due to larger container */
+.MeteoContainer .ExternalLink {
+  width: 0.8vw;
+  margin: 8px;
+  z-index: 10;
+}
+
 @media (orientation: portrait) {
   .GridContainer {
     grid-template-columns: 1fr 1fr;
@@ -132,10 +144,10 @@
   /* margin-top: 0; */
 }
 
-.Switch {
+.GeneralContainer .Switch {
   position: relative;
   display: inline-block;
-  height: 10%;
+  height: clamp(0.8rem, 1.5vw, 1.2rem);
   aspect-ratio: 2/1;
   margin-bottom: 5%;
 }
@@ -193,15 +205,14 @@
 }
 
 .SegmentedButton {
-  top: 50%;
-  transform: translateY(-25%);
-  /* background-color: #212121; */
-  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 65%;
   position: relative;
   font-size: clamp(0.5rem, 0.8vw, 1.3rem);
-  font-weight: lighter
+  font-weight: lighter;
 }
 
 .SegmentedInput {
@@ -213,27 +224,73 @@
   width: 30%;
   aspect-ratio: 3/1;
   text-align: center;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  display: inline-block;
   z-index: 2;
   cursor: pointer;
   outline: 1px solid green;
-  padding-top: 3%;
   font-weight: bold;
   background-color: #212121;
+  color: white;
+}
+
+/* Light mode styles for segmented buttons */
+.GateContainer.light .SegmentLabels {
+  background-color: #f0f0f0;
+  color: black;
+  outline: 1px solid #ccc;
+}
+
+.GateContainer.light .SegmentedInput:checked+.SegmentLabels {
+  background-color: #00af06;
+  color: white;
 }
 
 .SegmentedInput:checked+.SegmentLabels {
   background-color: #00af06;
 }
 
+.SegmentLabels:hover {
+  background-color: #2a2a2a;
+  transition: background-color 0.2s ease;
+}
+
+.SegmentedInput:checked+.SegmentLabels:hover {
+  background-color: #00c507;
+}
+
+/* Light mode hover styles for segmented buttons */
+.GateContainer.light .SegmentLabels:hover {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+.GateContainer.light .SegmentedInput:checked+.SegmentLabels:hover {
+  background-color: #00c507;
+  color: white;
+}
+
+/* Hide the background element on General page only */
+.GeneralContainer #bckgrnd {
+  display: none;
+}
+
 #bckgrnd {
-  /* background-color: #00af06 !important; */
   position: absolute;
-  left: 5%;
+  left: 0;
   top: 0;
   z-index: -1;
+  width: 30%;
+  height: 100%;
+  background-color: #00af06;
+  outline: 1px solid green;
+}
+
+/* Light mode background */
+.GateContainer.light #bckgrnd {
+  background-color: #00af06;
+  outline: 1px solid #ccc;
 }
 
 #rad1:checked~#bckgrnd {
@@ -323,6 +380,10 @@
   color: white;
 }
 
+.GateContainer.light>.GateGrid>.GateState {
+  color: black;
+}
+
 /* .GateContainer:hover{
   transform: scale(1.1);
 } */
@@ -332,6 +393,7 @@
   grid-template-rows: 35% 35% 30%;
   height: 100%;
   width: 100%;
+  gap: 5px;
 }
 
 .GateState {
@@ -341,6 +403,7 @@
   align-items: center;
   justify-content: center;
   font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 500;
 }
 
 /* #endregion */
@@ -430,8 +493,11 @@
   display: none;
   position: absolute;
   /* background-color: #f9f9f9; */
-  width: 100%;
-  height: 30%;
+  width: fit-content;
+  min-width: 7rem;
+  min-height: auto;
+  max-height: 12rem;
+  overflow-y: auto;
   /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
   z-index: 2;
 }
@@ -449,12 +515,14 @@
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: absolute;
   bottom: 100%;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   overflow: visible;
-  margin-bottom: 30%;
+  margin-bottom: 0;
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
@@ -463,15 +531,33 @@
 }
 
 .CleanerButtons {
-  height: 100%;
-  top: 0;
+  height: auto;
+  min-height: 2.2rem;
+  width: 100%;
   position: relative;
   margin: 0;
-  padding: 0;
+  padding: 0.4rem 0.6rem;
+  border: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+  white-space: nowrap;
+  text-align: center;
 }
 
 .dropdown .CleanerButtons:hover {
   background-color: #00af06;
+}
+
+.CleanerContainer.light .CleanerButtons {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.CleanerContainer.light .dropdown .CleanerButtons:hover {
+  background-color: #00af06;
+  color: white;
 }
 
 .CleanerState {
@@ -489,7 +575,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 90%;
+  width: 98%;
   margin: 0;
   padding: 0;
   transition: transform 0.4s ease-in-out;
@@ -509,7 +595,7 @@
   display: grid;
   grid-template-rows: 1fr 1fr;
   height: 90%;
-  width: 90%;
+  width: 100%;
 }
 
 /* .MeteoContent *{

@@ -40,11 +40,12 @@ const RadarMap = () => {
   const apiKey = "155d5d34772a64143b2ababd0354302e";
 
   // Coordinates for Czech Republic (you can change this for other locations)
-  const lat = 50.4000;
-  const lon = 14;
+  const lat = 50.596924;
+  const lon = 14.036784;
+
 
   // Zoom level (adjust as necessary)
-  const zoomLevel = 8;
+  const zoomLevel = 9;
 
   // Calculate the tile coordinates for the given latitude, longitude, and zoom level
   const tileCoords = latLonToTile(lat, lon, zoomLevel);

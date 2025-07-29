@@ -1,4 +1,4 @@
-.Control{
+.Control {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,7 +6,7 @@
     width: 100%;
 }
 
-.ControlFlex{
+.ControlFlex {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +16,65 @@
     gap: 10%
 }
 
-.State{
+.State {
     font-size: 3vb;
 }
 
+/* Switch styling for better usability on Lights page */
+.Switch {
+    position: relative;
+    display: inline-block;
+    height: clamp(2rem, 4vw, 3rem);
+    aspect-ratio: 2/1;
+    margin-bottom: 5%;
+}
+
+.Switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.Slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #a9a9a9;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.Slider:before {
+    position: absolute;
+    content: "";
+    height: 80%;
+    aspect-ratio: 1/1;
+    left: 5%;
+    bottom: 10%;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.SwitchInput:checked+.Slider {
+    background-color: #00af06;
+}
+
+.SwitchInput:focus+.Slider {
+    box-shadow: 0 0 1px #00af06;
+}
+
+.SwitchInput:checked+.Slider:before {
+    transform: translateX(120%);
+}
+
+.Slider.Round {
+    border-radius: 34px;
+}
+
+.Slider.Round:before {
+    border-radius: 50%;
+}

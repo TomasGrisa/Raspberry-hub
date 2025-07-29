@@ -263,7 +263,7 @@ function Grid() {
             </Heater>
           </GridItem>
           <GridItem nav={() => { navigate("/home/gate") }} isLightMode={isLightMode} wantNav={true}>
-            <Gate state={gateState} controlState={gateControlState} setGateControlState={setGateControlState} />
+            <Gate state={gateState} controlState={gateControlState} setGateControlState={setGateControlState} isLightMode={isLightMode} />
           </GridItem>
         </div>
         <div className="GridColumn" style={{ gridTemplateRows: "25% 25% 50%" }}>
@@ -593,7 +593,7 @@ function Meteostation({
 
 // #endregion
 
-function Gate({ state, controlState, setGateControlState }) {
+function Gate({ state, controlState, setGateControlState, isLightMode }) {
 
   const [check1, setCheck1] = useState(false);
   const [check2, setCheck2] = useState(false);
@@ -677,7 +677,7 @@ function Gate({ state, controlState, setGateControlState }) {
   }
 
   return (
-    <div className="GateContainer">
+    <div className={`GateContainer${isLightMode === true ? " light" : ""}`}>
       <h2 className="GridHeader">Brána</h2>
       <div className="GateGrid">
         <div className="GateState"><div>{ControlStateInterpreter(controlState)}</div></div>

@@ -12,6 +12,26 @@ export function Content({ isLightMode, selectedItem, setSelectedItem, control, l
 
   const controlsRef = useRef(null);
   const showRef = useRef(null);
+  const containerRef = useRef(null);
+  const isScrollingProgrammatically = useRef(false);
+  const lastWheelTime = useRef(0);
+  const scrollTimeoutRef = useRef(null);
+
+  // Helper function to manage programmatic scrolling flag
+  const setProgrammaticScrolling = (duration = 1500) => {
+    isScrollingProgrammatically.current = true;
+
+    // Clear any existing timeout
+    if (scrollTimeoutRef.current) {
+      clearTimeout(scrollTimeoutRef.current);
+    }
+
+    // Set new timeout
+    scrollTimeoutRef.current = setTimeout(() => {
+      isScrollingProgrammatically.current = false;
+      scrollTimeoutRef.current = null;
+    }, duration);
+  };
 
   // Effect to handle scrolling when `selectedItem` changes
   useEffect(() => {
@@ -24,6 +44,7 @@ export function Content({ isLightMode, selectedItem, setSelectedItem, control, l
     }
 
     if (targetRef) {
+      setProgrammaticScrolling(1500); // Use consistent timeout
       targetRef.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [selectedItem]);
@@ -31,34 +52,93 @@ export function Content({ isLightMode, selectedItem, setSelectedItem, control, l
 
   useEffect(() => {
     const handleScroll = () => {
+      // Don't update selectedItem if we're scrolling programmatically
+      if (isScrollingProgrammatically.current) {
+        console.log("Ignoring scroll event during programmatic scroll");
+        return;
+      }
+
       console.log("handleScroll");
       const controlsTop = controlsRef.current?.getBoundingClientRect().top || 0;
       const displayTop = showRef.current?.getBoundingClientRect().top || 0;
+      const containerRect = containerRef.current?.getBoundingClientRect();
+      const containerMiddle = containerRect ? containerRect.top + containerRect.height / 2 : window.innerHeight / 2;
 
       console.log("controlsTop:", controlsTop);
       console.log("displayTop:", displayTop);
+      console.log("containerMiddle:", containerMiddle);
 
-      // Compare positions to determine which section is in view
-      if (controlsTop <= 100 && controlsTop >= -100) {
+      // Determine which section is currently in view based on container's middle
+      if (displayTop > containerMiddle) {
         console.log("Setting selectedItem to Controls");
         setSelectedItem("Controls");
-      } else if (displayTop <= 100 && displayTop >= -100) {
+      } else {
         console.log("Setting selectedItem to Show");
         setSelectedItem("Show");
       }
     };
 
-    console.log("Scroll listener added");
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    const container = containerRef.current;
+    if (container) {
+      console.log("Scroll listener added to container");
+      container.addEventListener("scroll", handleScroll, { passive: true });
 
-    return () => {
-      console.log("Scroll listener removed");
-      window.removeEventListener("scroll", handleScroll);
-    };
+      return () => {
+        console.log("Scroll listener removed from container");
+        container.removeEventListener("scroll", handleScroll);
+      };
+    }
   }, [setSelectedItem]);
 
+  // Wheel event listener for snap scrolling
+  useEffect(() => {
+    const handleWheel = (e) => {
+      const now = Date.now();
+
+      // Throttle wheel events to prevent too frequent triggering
+      if (now - lastWheelTime.current < 500) {
+        e.preventDefault();
+        return;
+      }
+
+      lastWheelTime.current = now;
+
+      // Prevent default scrolling behavior
+      e.preventDefault();
+
+      const deltaY = e.deltaY;
+
+      // Set the programmatic scrolling flag to prevent scroll detection interference
+      setProgrammaticScrolling(1500);
+
+      // Determine scroll direction and target section
+      if (deltaY > 0) {
+        // Scrolling down - go to Show section
+        if (selectedItem !== "Show") {
+          setSelectedItem("Show");
+        }
+      } else {
+        // Scrolling up - go to Controls section
+        if (selectedItem !== "Controls") {
+          setSelectedItem("Controls");
+        }
+      }
+    };
+
+    const container = containerRef.current;
+    if (container) {
+      console.log("Wheel listener added to container");
+      container.addEventListener("wheel", handleWheel, { passive: false });
+
+      return () => {
+        console.log("Wheel listener removed from container");
+        container.removeEventListener("wheel", handleWheel);
+      };
+    }
+  }, [selectedItem, setSelectedItem]);
+
   return (
-    <div className={`Content-container ${isLightMode === true ? "Content-container-light" : ""}`} style={{ height: IsGraphEnabled ? "200vh" : "100vh", overflowY: IsGraphEnabled ? "auto" : "hidden", overflowX: "hidden" }}>
+    <div ref={containerRef} className={`Content-container ${isLightMode === true ? "Content-container-light" : ""}`} style={{ height: IsGraphEnabled ? "200vh" : "100vh", overflowY: IsGraphEnabled ? "auto" : "hidden", overflowX: "hidden" }}>
       <div ref={controlsRef} className={`Content ${isLightMode === true ? "Content-light" : ""}`} style={{ paddingTop: IsGraphEnabled ? "105vh" : "8vh", maxHeight: "100%" }}>
         <div className="CContainer">
           <div className="CControls">
@@ -557,7 +637,7 @@ export function temp() {
 }
 
 
-export function Settings() {
+export function Settings({ isLightMode }) {
   const SignOut = (e) => {
     console.log("SignOut");
     try {
@@ -569,16 +649,20 @@ export function Settings() {
     }
   }
   return (
-    <div>
+    <div className={`SettingsContainer${isLightMode ? ' light' : ''}`}>
       <button className="SignOut" onClick={SignOut}>Odhlásit se</button>
     </div>
   )
 }
 
 export function ListTool({ rowCount, setRowCount, onSearch }) {
-  // const [rowCount, setRowCount] = useState(100);
-  const [startDate, setStartDate] = useState('');
-  const [endDate, setEndDate] = useState('');
+  // Default to last 24 hours
+  const yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);
+  const today = new Date();
+
+  const [startDate, setStartDate] = useState(yesterday.toISOString().split('T')[0]);
+  const [endDate, setEndDate] = useState(today.toISOString().split('T')[0]);
 
   const handleInputChange = (e) => {
     console.log("Input changed");
@@ -595,6 +679,31 @@ export function ListTool({ rowCount, setRowCount, onSearch }) {
   const handleSearchClick = () => {
     onSearch(startDate, endDate, rowCount);
   };
+
+  // to try!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  //   const handleSearchClick = async () => {
+  //   try {
+  //     const response = await fetch(
+  //       `/GetTempDataSmart?startDate=${startDate}&endDate=${endDate}&requestedCount=${rowCount}`
+  //     );
+  //     const result = await response.json();
+
+  //     // Update table data
+  //     setTableData(result.items);
+
+  //     // Show user feedback
+  //     if (result.error) {
+  //       window.alert(`Warning: ${result.error}\n${result.message}`);
+  //     } else if (result.wasSampled) {
+  //       window.alert(`Data sampled: ${result.message}`);
+  //     }
+  //     // For non-sampled data, no alert needed
+
+  //   } catch (error) {
+  //     console.error('Search failed:', error);
+  //     window.alert('Search failed. Please try again.');
+  //   }
+  // };
 
 
 

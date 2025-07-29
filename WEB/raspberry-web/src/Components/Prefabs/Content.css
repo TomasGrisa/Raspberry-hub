@@ -1,17 +1,15 @@
-
-
-.CContainer{
+.CContainer {
     height: 100%;
     max-height: 100%;
     width: 100%;
     display: grid;
     grid-template-columns: 49.9% 0.2% 49.9%;
     text-align: center;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 
-.CControls{
+.CControls {
     /* display: flex;
     justify-content: center;
     align-items: center; */
@@ -20,13 +18,17 @@
     width: 100%;
 }
 
-.CControls:hover{
+.CControls:hover {
     transition: 0.3s ease;
     background-color: #333;
 }
 
+.Content-light .CControls:hover {
+    background-color: #f5f5f5;
+}
 
-.Splitter{
+
+.Splitter {
     flex: 1;
     height: 95%;
     width: 100%;
@@ -36,13 +38,42 @@
 }
 
 
-.SignOut{
-    height: 100px;
-    width: 150px;
+.SignOut {
+    height: 6.25rem;
+    width: 9.375rem;
     background-color: #00af06;
-    border-radius: 5px solid white;
+    border-radius: 0.3rem;
+    border: 0.2rem solid white;
     color: white;
     font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.SignOut:hover {
+    background-color: #00c507;
+}
+
+/* Settings Container */
+.SettingsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+}
+
+/* Light mode styles for Settings */
+.SettingsContainer.light .SignOut {
+    border: 0.2rem solid #333;
+    background-color: #00af06;
+    color: white;
+}
+
+.SettingsContainer.light .SignOut:hover {
+    background-color: #00c507;
 }
 
 /* 
@@ -51,7 +82,7 @@ Prefabs
 
 
 
-.CheckBox{
+.CheckBox {
     height: 100%;
     width: 100%;
     /* transform: scale(2); */
@@ -61,12 +92,15 @@ Prefabs
 }
 
 .table-container {
-    max-height: 68vh; /* You can adjust the height as needed */
-    overflow-y: auto; /* Adds a scrollbar to the table */
+    max-height: 68vh;
+    /* You can adjust the height as needed */
+    overflow-y: auto;
+    /* Adds a scrollbar to the table */
     /* border: 1px solid #ddd; */
     /* background-color: #151515; */
     text-align: center;
-    /* border: 1px solid yellow; */;
+    /* border: 1px solid yellow; */
+    ;
 }
 
 /* Styling for the table */
@@ -78,16 +112,34 @@ Prefabs
     text-align: center;
     overflow-y: hidden;
     border: none;
+    color: white;
 }
 
-.dynamic-table th, .dynamic-table td {
+/* Light mode styling for the table */
+.Content-light .dynamic-table {
+    background-color: #f8f8f8;
+    color: black;
+}
+
+.Content-light .dynamic-table th {
+    background-color: #e0e0e0;
+    color: black;
+}
+
+.Content-light .dynamic-table tr:hover {
+    background-color: #e8e8e8;
+}
+
+.dynamic-table th,
+.dynamic-table td {
     text-align: left;
     text-align: center;
 }
 
-.dynamic-table thead{
+.dynamic-table thead {
     position: sticky;
-    top: 0; /* Keep the entire header at the top */
+    top: 0;
+    /* Keep the entire header at the top */
     z-index: 2;
 }
 
@@ -110,27 +162,27 @@ z-index: 1;
     font-size: clamp(0.1rem, 1vw, 1rem);
     height: 1vh;
 }
-  
+
 /* Optional: Add hover effect on rows */
 .dynamic-table tr:hover {
-background-color: #f1f1f1;
+    background-color: #f1f1f1;
 }
 
 .Switch {
     position: relative;
     display: inline-block;
-    height: 20%;
+    height: clamp(1.5rem, 3vw, 2.5rem);
     aspect-ratio: 2/1;
     margin-bottom: 5%;
-  }
-  
-  .Switch input { 
+}
+
+.Switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  .Slider {
+}
+
+.Slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -140,9 +192,9 @@ background-color: #f1f1f1;
     background-color: #a9a9a9;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  .Slider:before {
+}
+
+.Slider:before {
     position: absolute;
     content: "";
     height: 80%;
@@ -152,37 +204,37 @@ background-color: #f1f1f1;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  .SwitchInput:checked + .Slider {
+}
+
+.SwitchInput:checked+.Slider {
     background-color: #00af06;
-  }
-  
-  .SwitchInput:focus + .Slider {
+}
+
+.SwitchInput:focus+.Slider {
     box-shadow: 0 0 1px #00af06;
-  }
-  
-  .SwitchInput:checked + .Slider:before {
+}
+
+.SwitchInput:checked+.Slider:before {
     /* -webkit-transform: translateX(200%);
     -ms-transform: translateX(200%); */
     transform: translateX(120%);
-  }
+}
 
 .Slider.Round {
     border-radius: 34px;
-  }
-  
-  .Slider.Round:before {
+}
+
+.Slider.Round:before {
     border-radius: 50%;
-  }
+}
 
 
 
-  .TempCList{
+.TempCList {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;    
+    flex: 1;
     display: grid;
     grid-template-rows: 15% 85%;
     height: 100%;
@@ -192,30 +244,34 @@ background-color: #f1f1f1;
     left: 50%;
 }
 
-.TempCList:hover{
+.TempCList:hover {
     transition: 0.3s ease;
     background-color: #333;
 }
 
-.ListHeader{
+.Content-light .TempCList:hover {
+    background-color: #f5f5f5;
+}
+
+.ListHeader {
     height: 40%;
 }
 
-.ListTool{
-height: 100%;
-width: 100%;
-display: grid;
-grid-template-rows: 1fr 1fr;
+.ListTool {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
-.ListTool input{
+.ListTool input {
     height: 50%;
     width: 60%;
     /* font-size: 1.5rem; */
     /* margin: 2%; */
 }
 
-.Dates{
+.Dates {
     height: 100%;
     width: 100%;
     /* display: grid;
@@ -226,7 +282,7 @@ grid-template-rows: 1fr 1fr;
     gap: 5%;
 }
 
-.SearchContainer{
+.SearchContainer {
     height: 100%;
     width: 100%;
     /* display: grid;
@@ -249,20 +305,20 @@ grid-template-rows: 1fr 1fr;
 
 }*/
 
-.Search{
+.Search {
     border-radius: 5px;
     background-color: #00af06;
     color: white;
     border: none;
     transition: 0.3s ease;
-} 
+}
 
-.Search:hover{
+.Search:hover {
     background-color: #028a07;
     color: white;
 }
 
-.Graph{
+.Graph {
     height: 100%;
     width: 100%;
     max-width: 100%;

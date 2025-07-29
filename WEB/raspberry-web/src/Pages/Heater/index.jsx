@@ -39,6 +39,12 @@ function Heater() {
       return;
     }
 
+    // Check if the first item exists and has the required property
+    if (!newestData[0] || typeof newestData[0].temperature_livingroom === 'undefined') {
+      console.log("Invalid data structure received:", newestData);
+      return;
+    }
+
     // Get the latest temperature entry
     const latestNewTemperature = newestData[0].temperature_livingroom;
 
@@ -131,7 +137,7 @@ function Heater() {
     <Content
       isLightMode={isLightMode}
       selectedItem={selectedItem}
-      setItem={setSelectedItem}
+      setSelectedItem={setSelectedItem}
       control={Control()}
       listTool={<ListTool rowCount={rows} setRowCount={setRows} onSearch={handleSearch} />}
       list={<DynamicTable data={tableData} />}

@@ -232,7 +232,7 @@ function Cleaner() {
     }
 
     return (
-      <div className="CleanerContainer">
+      <div className={`CleanerContainer${isLightMode ? ' light' : ''}`}>
         <h2 className="GridHeader" ></h2>
         <div className="LightsGrid" style={{ gap: "0" }}>
           <div className="LightsState CleanerState" style={{ height: "20%" }}>{StateInterpreter(state)}</div>
