@@ -3,6 +3,8 @@ import { useOutletContext } from 'react-router-dom';
 import { Content, ListTool } from '../../Components/Prefabs/Content';
 import "../../Components/Prefabs/Prefab.css";
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
+
 function Water() {
 
     const { isLightMode, selectedItem, setSelectedItem, IsGraphEnabled } = useOutletContext();
@@ -18,7 +20,7 @@ function Water() {
 
     const fetchData = async () => {
 
-        const newestResponse = await fetch('http://localhost:5000/newestWater');
+        const newestResponse = await fetch(`${API_BASE_URL}/newestWater`);
         const newestData = await newestResponse.json();
 
         if (!newestData || newestData.length === 0) {
@@ -41,9 +43,7 @@ function Water() {
             }
 
             const response = await fetch(
-                // `http://localhost:3000/GetLights?limit=${rowCount}&startDate=${startDate}&endDate=${endDate}`
-                // `http://localhost:5000/GetLights?limit=100}&startDate="2025-3-13"&endDate="2025-3-14"`
-                `http://localhost:5000/GetWaterData?limit=${rowCount}&startDate=${startDate}&endDate=${endDate}`
+                `${API_BASE_URL}/GetWaterData?limit=${rowCount}&startDate=${startDate}&endDate=${endDate}`
             );
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -102,7 +102,7 @@ function Water() {
         const fetchData = async () => {
             try {
                 console.log('Fetching water data...');
-                const response = await fetch('http://localhost:5000/newestWater');
+                const response = await fetch(`${API_BASE_URL}/newestWater`);
                 const data = await response.json();
                 if (data.length > 0) {
                     const latestData = data[0];
@@ -115,7 +115,7 @@ function Water() {
             try {
                 console.log('Fetching control data...');
                 // const response = await fetch('http://localhost:3000/controlLights');
-                const response = await fetch('http://localhost:5000/controlWater');
+                const response = await fetch(`${API_BASE_URL}/controlWater`);
                 const data = await response.json();
                 if (data.length > 0) {
                     const latestData = data[0];
@@ -133,7 +133,7 @@ function Water() {
             try {
                 console.log("Lights data being sent:");
                 // const response = await fetch('http://localhost:3000/updateWater', {
-                const response = await fetch('http://localhost:5000/updateWater', {
+                const response = await fetch(`${API_BASE_URL}/updateWater`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -187,13 +187,12 @@ function Water() {
         //         const endDate = "" //"2024-01-31";
 
         //         const response = await fetch(
-        //             // `http://localhost:5000/GetTempData?limit=${limit}&startDate=${startDate}&endDate=${endDate}`
-        //             `http://localhost:3000/GetGateData?limit=${rows}`
-        //             // `http://localhost:5000/GetGateData?limit=${rows}`
+        //             // API endpoint for getting water data
+        //             API_BASE_URL + "/GetWaterData?limit=" + rows
         //         );
 
         //         if (!response.ok) {
-        //             throw new Error(`HTTP error! status: ${response.status}`);
+        //             throw new Error("HTTP error! status: " + response.status);
         //         }
 
         //         const data = await response.json();

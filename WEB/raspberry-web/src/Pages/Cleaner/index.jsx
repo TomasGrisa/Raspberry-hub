@@ -3,6 +3,8 @@ import { useOutletContext } from 'react-router-dom';
 import { Content, ListTool } from '../../Components/Prefabs/Content';
 import "../../Components/Prefabs/Prefab.css";
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
+
 function Cleaner() {
 
   const { isLightMode, selectedItem, setSelectedItem, IsGraphEnabled } = useOutletContext();
@@ -17,7 +19,7 @@ function Cleaner() {
 
   const fetchData = async () => {
 
-    const newestResponse = await fetch('http://localhost:5000/newestCleaner');
+    const newestResponse = await fetch(`${API_BASE_URL}/newestCleaner`);
     const newestData = await newestResponse.json();
 
     if (!newestData || newestData.length === 0) {
@@ -42,12 +44,12 @@ function Cleaner() {
 
       const response = await fetch(
         // `http://localhost:3000/GetGateData?limit=${rowCount}&startDate=${startDate}&endDate=${endDate}`
-        // `http://localhost:5000/GetGateData?limit=100}&startDate="2025-3-13"&endDate="2025-3-14"`
-        `http://localhost:5000/GetCleanerData?limit=${rowCount}&startDate=${startDate}&endDate=${endDate}`
+        // `${API_BASE_URL}/GetGateData?limit=100}&startDate="2025-3-13"&endDate="2025-3-14"`
+        `${API_BASE_URL}/GetCleanerData?limit=${rowCount}&startDate=${startDate}&endDate=${endDate}`
       );
 
       // const response = await fetch(
-      //   `http://localhost:5000/GetTempData?limit=${rowCount || 100}&startDate=${startDate || ''}&endDate=${endDate || ''}`
+      //   `${API_BASE_URL}/GetTempData?limit=${rowCount || 100}&startDate=${startDate || ''}&endDate=${endDate || ''}`
       // );
 
       if (!response.ok) {
@@ -133,7 +135,7 @@ function Cleaner() {
       try {
         console.log('Fetching data...');
         // const response = await fetch('http://localhost:3000/newestGate');
-        const response = await fetch('http://localhost:5000/newestCleaner');
+        const response = await fetch(`${API_BASE_URL}/newestCleaner`);
         const data = await response.json();
         if (data.length > 0) {
           const latestData = data[0];
@@ -147,7 +149,7 @@ function Cleaner() {
       try {
         console.log('Fetching control data...');
         // const response = await fetch('http://localhost:3000/controlGate');
-        const response = await fetch('http://localhost:5000/controlCleaner');
+        const response = await fetch(`${API_BASE_URL}/controlCleaner`);
         const data = await response.json();
         if (data.length > 0) {
           const latestData = data[0];
@@ -215,7 +217,7 @@ function Cleaner() {
 
       console.log("Cleaner data being sent:");
       // fetch('http://localhost:3000/updateCleaner', {
-      fetch('http://localhost:5000/updateCleaner', {
+      fetch(`${API_BASE_URL}/updateCleaner`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -271,9 +273,9 @@ function Cleaner() {
     //     const endDate = "" //"2024-01-31";
 
     //     const response = await fetch(
-    //       // `http://localhost:5000/GetTempData?limit=${limit}&startDate=${startDate}&endDate=${endDate}`
+    //       // `${API_BASE_URL}/GetTempData?limit=${limit}&startDate=${startDate}&endDate=${endDate}`
     //       `http://localhost:3000/GetGateData?limit=${rows}`
-    //       // `http://localhost:5000/GetGateData?limit=${rows}`
+    //       // `${API_BASE_URL}/GetGateData?limit=${rows}`
     //     );
 
     //     if (!response.ok) {

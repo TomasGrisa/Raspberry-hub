@@ -3,6 +3,8 @@ import { useOutletContext } from 'react-router-dom';
 import { Content, ListTool } from '../../Components/Prefabs/Content';
 import "../../Components/Prefabs/Prefab.css";
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
+
 function Gate() {
 
   const { isLightMode, selectedItem, setSelectedItem, IsGraphEnabled } = useOutletContext();
@@ -17,7 +19,7 @@ function Gate() {
 
   const fetchData = async () => {
 
-    const newestResponse = await fetch('http://localhost:5000/newestGate');
+    const newestResponse = await fetch(`${API_BASE_URL}/newestGate`);
     const newestData = await newestResponse.json();
 
     if (!newestData || newestData.length === 0) {
@@ -41,13 +43,11 @@ function Gate() {
       }
 
       const response = await fetch(
-        // `http://localhost:3000/GetGateData?limit=${rowCount}&startDate=${startDate}&endDate=${endDate}`
-        // `http://localhost:5000/GetGateData?limit=100}&startDate="2025-3-13"&endDate="2025-3-14"`
-        `http://localhost:5000/GetGateData?limit=${rowCount}&startDate=${startDate}&endDate=${endDate}`
+        `${API_BASE_URL}/GetGateData?limit=${rowCount}&startDate=${startDate}&endDate=${endDate}`
       );
 
       // const response = await fetch(
-      //   `http://localhost:5000/GetTempData?limit=${rowCount || 100}&startDate=${startDate || ''}&endDate=${endDate || ''}`
+      //   `${API_BASE_URL}/GetTempData?limit=${rowCount || 100}&startDate=${startDate || ''}&endDate=${endDate || ''}`
       // );
 
       if (!response.ok) {
@@ -102,7 +102,7 @@ function Gate() {
       try {
         console.log('Fetching data...');
         // const response = await fetch('http://localhost:3000/newestGate');
-        const response = await fetch('http://localhost:5000/newestGate');
+        const response = await fetch(`${API_BASE_URL}/newestGate`);
         const data = await response.json();
         if (data.length > 0) {
           const latestData = data[0]; // Get the most recent data
@@ -115,7 +115,7 @@ function Gate() {
       try {
         console.log('Fetching control data...');
         // const response = await fetch('http://localhost:3000/controlGate');
-        const response = await fetch('http://localhost:5000/controlGate');
+        const response = await fetch(`${API_BASE_URL}/controlGate`);
         const data = await response.json();
         if (data.length > 0) {
           const latestData = data[0];
@@ -189,7 +189,7 @@ function Gate() {
     function SendData(value) {
 
       // fetch('http://localhost:3000/updateGate', {
-      fetch('http://localhost:5000/updateGate', {
+      fetch(`${API_BASE_URL}/updateGate`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -243,8 +243,8 @@ function Gate() {
     //     const endDate = "" //"2024-01-31";
 
     //     const response = await fetch(
-    //       // `http://localhost:5000/GetTempData?limit=${limit}&startDate=${startDate}&endDate=${endDate}`
-    //       `http://localhost:5000/GetGateData?limit=${rows}`
+    //       // `${API_BASE_URL}/GetTempData?limit=${limit}&startDate=${startDate}&endDate=${endDate}`
+    //       `${API_BASE_URL}/GetGateData?limit=${rows}`
     //       // `http://localhost:3000/GetGateData?limit=${rows}`
 
     //     );

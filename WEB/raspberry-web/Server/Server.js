@@ -522,7 +522,7 @@ app.get("/GetLightsData", async (req, res) => {
 
   const limitRows = parseInt(limit, 10) || 100;
 
-  let query = `SELECT * FROM Lights`;
+  let query = `SELECT * FROM lights`;
   const queryParams = [];
 
   // Add date filtering conditions if applicable

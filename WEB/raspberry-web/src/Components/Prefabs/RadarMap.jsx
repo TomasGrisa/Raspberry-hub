@@ -53,7 +53,13 @@ const RadarMap = () => {
   console.log("Tile Coordinates: ", tileCoords); // This will log the calculated tile coordinates
 
   return (
-    <MapContainer center={[lat, lon]} zoom={zoomLevel} style={{ height: "100%", width: "100%", margin: "5%" }}>
+    <MapContainer
+      center={[lat, lon]}
+      zoom={zoomLevel}
+      style={{
+        height: "100%",
+        width: "100%"
+      }}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution="&copy; OpenStreetMap contributors"

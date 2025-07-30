@@ -1,9 +1,10 @@
 import { React, useState, useEffect, useRef } from 'react';
 import { useOutletContext } from "react-router-dom";
 import "../../Components/Prefabs/Prefab.css";
-import "../../Components/Prefabs/Content"
 import { Graph, Content, ListTool } from '../../Components/Prefabs/Content';
 import "./Heater.css";
+
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
 
 function Heater() {
   const { isLightMode, selectedItem, setSelectedItem } = useOutletContext();
@@ -31,7 +32,7 @@ function Heater() {
 
   const fetchData = async () => {
 
-    const newestResponse = await fetch('http://localhost:5000/newestTemp');
+    const newestResponse = await fetch(`${API_BASE_URL}/newestTemp`);
     const newestData = await newestResponse.json();
 
     if (!newestData || newestData.length === 0) {
@@ -57,7 +58,7 @@ function Heater() {
     try {
       console.log('Fetching Temp data to graph...');
       // const response = await fetch('http://localhost:3000/Temp');
-      const response = await fetch('http://localhost:5000/Temp');
+      const response = await fetch(`${API_BASE_URL}/Temp`);
       const data = await response.json();
 
 
@@ -96,12 +97,12 @@ function Heater() {
 
       const response = await fetch(
         // `http://localhost:3000/GetTempData?limit=${rowCount}&startDate=${startDate}&endDate=${endDate}`
-        // `http://localhost:5000/GetTempData?limit=100}&startDate="2025-3-13"&endDate="2025-3-14"`
-        `http://localhost:5000/GetTempData?limit=${rowCount}&startDate=${startDate}&endDate=${endDate}`
+        // `${API_BASE_URL}/GetTempData?limit=100}&startDate="2025-3-13"&endDate="2025-3-14"`
+        `${API_BASE_URL}/GetTempData?limit=${rowCount}&startDate=${startDate}&endDate=${endDate}`
       );
 
       // const response = await fetch(
-      //   `http://localhost:5000/GetTempData?limit=${rowCount || 100}&startDate=${startDate || ''}&endDate=${endDate || ''}`
+      //   `${API_BASE_URL}/GetTempData?limit=${rowCount || 100}&startDate=${startDate || ''}&endDate=${endDate || ''}`
       // );
 
       if (!response.ok) {
@@ -176,7 +177,7 @@ function Heater() {
       try {
         console.log('Fetching data...');
         // const response = await fetch('http://localhost:3000/newestTemp');
-        const response = await fetch('http://localhost:5000/newestTemp');
+        const response = await fetch(`${API_BASE_URL}/newestTemp`);
         const data = await response.json();
         if (data.length > 0) {
           const latestData = data[0]; // Get the most recent data
@@ -191,7 +192,7 @@ function Heater() {
       try {
         console.log('Fetching control data...');
         // const response = await fetch('http://localhost:3000/controlTemp');
-        const response = await fetch('http://localhost:5000/controlTemp');
+        const response = await fetch(`${API_BASE_URL}/controlTemp`);
         const data = await response.json();
         if (data.length > 0) {
           const latestData = data[0];
@@ -312,7 +313,7 @@ function Heater() {
       });
 
       // fetch('http://localhost:3000/updateTemp', {
-      fetch('http://localhost:5000/updateTemp', {
+      fetch(`${API_BASE_URL}/updateTemp`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -433,7 +434,7 @@ function Heater() {
 
       try {
         // const response = await fetch('http://localhost:3000/updateSetTemp', {
-        const response = await fetch('http://localhost:5000/updateSetTemp', {
+        const response = await fetch(`${API_BASE_URL}/updateSetTemp`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -513,8 +514,8 @@ function Heater() {
   //           const endDate = "" //"2024-01-31";
 
   //           const response = await fetch(
-  //               // `http://localhost:5000/GetTempData?limit=${limit}&startDate=${startDate}&endDate=${endDate}`
-  //               `http://localhost:5000/GetTempData?limit=${rows}`
+  //               // `${API_BASE_URL}/GetTempData?limit=${limit}&startDate=${startDate}&endDate=${endDate}`
+  //               `${API_BASE_URL}/GetTempData?limit=${rows}`
   //           );
 
   //           if (!response.ok) {

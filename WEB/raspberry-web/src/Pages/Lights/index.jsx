@@ -5,6 +5,8 @@ import { Content, ListTool } from '../../Components/Prefabs/Content';
 import "../../Components/Prefabs/Prefab.css";
 import "./Lights.css";
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
+
 function Lights() {
   const { isLightMode, selectedItem, setSelectedItem, IsGraphEnabled } = useOutletContext();
   const [rows, setRows] = useState(100);
@@ -19,7 +21,7 @@ function Lights() {
 
   const fetchData = async () => {
 
-    const newestResponse = await fetch('http://localhost:5000/newestLights');
+    const newestResponse = await fetch(`${API_BASE_URL}/newestLights`);
     const newestData = await newestResponse.json();
 
     if (!newestData || newestData.length === 0) {
@@ -42,9 +44,7 @@ function Lights() {
       }
 
       const response = await fetch(
-        // `http://localhost:3000/GetLights?limit=${rowCount}&startDate=${startDate}&endDate=${endDate}`
-        // `http://localhost:5000/GetLights?limit=100}&startDate="2025-3-13"&endDate="2025-3-14"`
-        `http://localhost:5000/GetLightsData?limit=${rowCount}&startDate=${startDate}&endDate=${endDate}`
+        `${API_BASE_URL}/GetLightsData?limit=${rowCount}&startDate=${startDate}&endDate=${endDate}`
       );
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -105,7 +105,7 @@ function Control() {
     try {
       console.log('Fetching data...');
       // const response = await fetch('http://localhost:3000/newestLights');
-      const response = await fetch('http://localhost:5000/newestLights');
+      const response = await fetch(`${API_BASE_URL}/newestLights`);
       const data = await response.json();
       if (data.length > 0) {
         const latestData = data[0];
@@ -119,7 +119,7 @@ function Control() {
     try {
       console.log('Fetching control data...');
       // const response = await fetch('http://localhost:3000/controlLights');
-      const response = await fetch('http://localhost:5000/controlLights');
+      const response = await fetch(`${API_BASE_URL}/controlLights`);
       const data = await response.json();
       if (data.length > 0) {
         const latestData = data[0];
@@ -141,7 +141,7 @@ function Control() {
 
   //   try {
   //     // const response = await fetch('http://localhost:3000/updateSetLights', {
-  //     const response = await fetch('http://localhost:5000/updateLights', {
+  //     const response = await fetch(`${API_BASE_URL}/updateLights`, {
   //       method: 'POST',
   //       headers: {
   //         'Content-Type': 'application/json',
@@ -166,7 +166,7 @@ function Control() {
     setIsProcessing(true);
 
     try {
-      const response = await fetch("http://localhost:5000/updateLights", {
+      const response = await fetch(`${API_BASE_URL}/updateLights`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -203,7 +203,7 @@ function Control() {
 
     try {
       // Send update to the database
-      const response = await fetch("http://localhost:5000/updateTimeLights", {
+      const response = await fetch(`${API_BASE_URL}/updateTimeLights`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -285,13 +285,9 @@ function DynamicTable({ data }) {
   //     console.log("Fetching data...");
   //     //   const limit = 0; // Example parameter: limit the number of rows
   //     const startDate = "" //"2024-01-01"; // Example parameter: filter by date
-  //     const endDate = "" //"2024-01-31";
+  //     const endDate = "" 
 
-  //     const response = await fetch(
-  //       // `http://localhost:5000/GetTempData?limit=${limit}&startDate=${startDate}&endDate=${endDate}`
-  //       // `http://localhost:3000/GetLightsData?limit=${rows}`
-  //       `http://localhost:5000/GetLightsData?limit=${rows}`
-  //     );
+  // Commented out old fetch logic
 
   //     if (!response.ok) {
   //       throw new Error(`HTTP error! status: ${response.status}`);

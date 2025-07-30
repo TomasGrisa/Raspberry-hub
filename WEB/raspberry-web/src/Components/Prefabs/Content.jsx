@@ -5,6 +5,8 @@ import { Line } from "react-chartjs-2";
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from "chart.js";
 import Grid from "../../Pages/General";
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
+
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
@@ -186,7 +188,7 @@ export function Content({ isLightMode, selectedItem, setSelectedItem, control, l
 //     const fetchData = async () => {
 //         try {
 //             console.log('Fetching data...');
-//             const response = await fetch('http://localhost:5000/newestTemp');
+//             const response = await fetch(`${API_BASE_URL}/newestTemp');
 //             const data = await response.json();
 //             if (data.length > 0) {
 //                 const latestData = data[0]; // Get the most recent data
@@ -200,7 +202,7 @@ export function Content({ isLightMode, selectedItem, setSelectedItem, control, l
 
 //         try {
 //             console.log('Fetching control data...');
-//             const response = await fetch('http://localhost:5000/controlTemp');
+//             const response = await fetch(`${API_BASE_URL}/controlTemp');
 //             const data = await response.json();
 //             if (data.length > 0) {
 //                 const latestData = data[0];
@@ -269,8 +271,8 @@ export function Content({ isLightMode, selectedItem, setSelectedItem, control, l
 //                 const endDate = "" //"2024-01-31";
 
 //                 const response = await fetch(
-//                     // `http://localhost:5000/GetTempData?limit=${limit}&startDate=${startDate}&endDate=${endDate}`
-//                     `http://localhost:5000/GetTempData?limit=${100}`
+//                     // `${API_BASE_URL}/GetTempData?limit=${limit}&startDate=${startDate}&endDate=${endDate}`
+//                     `${API_BASE_URL}/GetTempData?limit=${100}`
 //                 );
 
 //                 if (!response.ok) {
@@ -401,7 +403,7 @@ export function Content({ isLightMode, selectedItem, setSelectedItem, control, l
 //                 value: intValue,  // Ensure this is in the correct format
 //               });
 
-//             fetch('http://localhost:5000/updateTemp', {
+//             fetch(`${API_BASE_URL}/updateTemp`, {
 //                 method: 'POST',
 //                 headers: {
 //                     'Content-Type': 'application/json',
@@ -477,7 +479,7 @@ export function Content({ isLightMode, selectedItem, setSelectedItem, control, l
 //             }
 
 //             try {
-//                 const response = await fetch('http://localhost:5000/updateSetTemp', {
+//                 const response = await fetch(`${API_BASE_URL}/updateSetTemp`, {
 //                     method: 'POST',
 //                     headers: {
 //                         'Content-Type': 'application/json',

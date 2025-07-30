@@ -8,6 +8,8 @@ import RadarMap from "../../Components/Prefabs/RadarMap";
 
 // import { setGraphEnabled } from "../Home";
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
+
 function Grid() {
   const navigate = useNavigate();
 
@@ -70,7 +72,7 @@ function Grid() {
     try {
       console.log('Fetching Temp data...');
       // const response = await fetch('http://localhost:3000/newestTemp');
-      const response = await fetch('http://localhost:5000/newestTemp');
+      const response = await fetch(`${API_BASE_URL}/newestTemp`);
       const data = await response.json();
       if (data.length > 0) {
         const latestData = data[0]; // Get the most recent data
@@ -86,7 +88,7 @@ function Grid() {
     try {
       console.log('Fetching Temp data to graph...');
       // const response = await fetch('http://localhost:3000/Temp');
-      const response = await fetch('http://localhost:5000/TempMeteo');
+      const response = await fetch(`${API_BASE_URL}/TempMeteo`);
       const data = await response.json();
       if (data.length > 0) {
         setLivingT(data.map(d => d.temperature_livingroom));
@@ -104,7 +106,7 @@ function Grid() {
     try {
       console.log('Fetching Temp data to graph...');
       // const response = await fetch('http://localhost:3000/Meteo');
-      const response = await fetch('http://localhost:5000/Meteo');
+      const response = await fetch(`${API_BASE_URL}/Meteo`);
       const data = await response.json();
       if (data.length > 0) {
         setOutTemp(data.map(d => d.temperature));
@@ -125,7 +127,7 @@ function Grid() {
     try {
       console.log('Fetching Control Temp data...');
       // const response = await fetch('http://localhost:3000/controlTemp');
-      const response = await fetch('http://localhost:5000/controlTemp');
+      const response = await fetch(`${API_BASE_URL}/controlTemp`);
       const data = await response.json();
       if (data.length > 0) {
         const latestData = data[0]; // Get the most recent data
@@ -145,7 +147,7 @@ function Grid() {
     try {
       console.log('Fetching Gate data...');
       // const response = await fetch('http://localhost:3000/newestGate');
-      const response = await fetch('http://localhost:5000/newestGate');
+      const response = await fetch(`${API_BASE_URL}/newestGate`);
       const data = await response.json();
       if (data.length > 0) {
         const latestData = data[0]; // Get the most recent data
@@ -158,7 +160,7 @@ function Grid() {
     try {
       console.log('Fetching Control Gate data...');
       // const response = await fetch('http://localhost:3000/controlGate');
-      const response = await fetch('http://localhost:5000/controlGate');
+      const response = await fetch(`${API_BASE_URL}/controlGate`);
       const data = await response.json();
       if (data.length > 0) {
         const latestData = data[0];
@@ -171,7 +173,7 @@ function Grid() {
     try {
       console.log('Fetching Lights data...');
       // const response = await fetch('http://localhost:3000/newestLigths');
-      const response = await fetch('http://localhost:5000/newestLigths');
+      const response = await fetch(`${API_BASE_URL}/newestLights`);
       const data = await response.json();
       if (data.length > 0) {
         const latestData = data[0];
@@ -184,7 +186,7 @@ function Grid() {
     try {
       console.log('Fetching Control Lights data...');
       // const response = await fetch('http://localhost:3000/controlLights');
-      const response = await fetch('http://localhost:5000/controlLights');
+      const response = await fetch(`${API_BASE_URL}/controlLights`);
       const data = await response.json();
       if (data.length > 0) {
         const latestData = data[0];
@@ -197,7 +199,7 @@ function Grid() {
     try {
       console.log('Fetching Water data...');
       // const response = await fetch('http://localhost:3000/newestWater');
-      const response = await fetch('http://localhost:5000/newestWater');
+      const response = await fetch(`${API_BASE_URL}/newestWater`);
       const data = await response.json();
       if (data.length > 0) {
         const latestData = data[0]; // Get the most recent data
@@ -210,7 +212,7 @@ function Grid() {
     try {
       console.log('Fetching Control Water data...');
       // const response = await fetch('http://localhost:3000/controlWater');
-      const response = await fetch('http://localhost:5000/controlWater');
+      const response = await fetch(`${API_BASE_URL}/controlWater`);
       const data = await response.json();
       if (data.length > 0) {
         const latestData = data[0];
@@ -223,7 +225,7 @@ function Grid() {
     try {
       console.log('Fetching Cleaner data...');
       // const response = await fetch('http://localhost:3000/newestCleaner');
-      const response = await fetch('http://localhost:5000/newestCleaner');
+      const response = await fetch(`${API_BASE_URL}/newestCleaner`);
       const data = await response.json();
       if (data.length > 0) {
         const latestData = data[0]; // Get the most recent data
@@ -237,7 +239,7 @@ function Grid() {
     try {
       console.log('Fetching Control Cleaner data...');
       // const response = await fetch('http://localhost:3000/controlCleaner');
-      const response = await fetch('http://localhost:5000/controlCleaner');
+      const response = await fetch(`${API_BASE_URL}/controlCleaner`);
       const data = await response.json();
       if (data.length > 0) {
         const latestData = data[0];
@@ -381,7 +383,7 @@ function HeaterItems({ name, temp, input, state, fetchData, setInputValue, input
     });
 
     // fetch('http://localhost:3000/updateTemp', {
-    fetch('http://localhost:5000/updateTemp', {
+    fetch(`${API_BASE_URL}/updateTemp`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -446,7 +448,7 @@ function HeaterItems({ name, temp, input, state, fetchData, setInputValue, input
 
     try {
       // const response = await fetch('http://localhost:3000/updateSetTemp', {
-      const response = await fetch('http://localhost:5000/updateSetTemp', {
+      const response = await fetch(`${API_BASE_URL}/updateSetTemp`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -511,9 +513,14 @@ function Meteostation({
   console.log("meteo data: ", livingT, OutTemp, OutHum, OutPres, OutWind, OutWindDir, OutRain, OutDate);
 
   const [graphIndex, setGraphIndex] = useState(1);
+  const [isCompactMode, setIsCompactMode] = useState(false);
 
   const cycleGraph = () => {
     setGraphIndex(prevIndex => (prevIndex % 6) + 1);
+  };
+
+  const toggleCompactMode = () => {
+    setIsCompactMode(prevMode => !prevMode);
   };
 
 
@@ -561,14 +568,14 @@ function Meteostation({
   return (
     <div className="MeteoContainer">
       <h2 className="GridHeader">Meteostanice</h2>
-      <div className="MeteoContent">
+      <div className={`MeteoContent ${isCompactMode ? 'compact' : ''}`}>
         <div className="TempGraph" onClick={cycleGraph}>
           {graphIndex === 1 && <Graph x={livingT} y={bathT} xl={"Obývací pokoj"} yl={"Koupelna"} date={tempDates} title={"Vnitřní teplota °C"} />}
-          {graphIndex === 2 && <Graph x={OutTemp} date={OutDate} title={"Vnější teplota"} />}
-          {graphIndex === 3 && <Graph x={OutHum} date={OutDate} title={"Vlhkost"} />}
-          {graphIndex === 4 && <Graph x={OutPres} date={OutDate} title={"Tlak"} />}
-          {graphIndex === 5 && <Graph x={OutWind} date={OutDate} title={"Vítr"} />}
-          {graphIndex === 6 && <Graph x={OutRain} date={OutDate} title={"Srážky"} />}
+          {graphIndex === 2 && <Graph x={OutTemp} xl={"Teplota °C"} date={OutDate} title={"Vnější teplota"} />}
+          {graphIndex === 3 && <Graph x={OutHum} xl={"Vlhkost %"} date={OutDate} title={"Vlhkost"} />}
+          {graphIndex === 4 && <Graph x={OutPres} xl={"Tlak hPa"} date={OutDate} title={"Tlak"} />}
+          {graphIndex === 5 && <Graph x={OutWind} xl={"Rychlost větru m/s"} date={OutDate} title={"Vítr"} />}
+          {graphIndex === 6 && <Graph x={OutRain} xl={"Srážky mm"} date={OutDate} title={"Srážky"} />}
         </div>
         {/* {showIndoor ? (
           <div className="TempGraph" onClick={toggleGraph}>
@@ -582,7 +589,7 @@ function Meteostation({
         {/* <div className="TempGraph">{<Graph x={livingT} y={tempDates} title={"Vnitřní teplota °C"} />}</div> */}
         {/* <div className="TempGraph">{<Graph x={livingT} y={bathT} z={boilerT} date={tempDates} title={"Vnitřní teplota °C"} />}</div> */}
         {/* <div className="MeteoData">{<Graph x={x} y={y} title={"Vnější podmínky"} />}</div> */}
-        <div className="LastRowContainer">
+        <div className="LastRowContainer" onClick={toggleCompactMode}>
           <RadarMap />
           {/* <div className="LastRowItem">testing 2</div> */}
         </div>
@@ -660,7 +667,7 @@ function Gate({ state, controlState, setGateControlState, isLightMode }) {
 
     console.log("Gate data being sent:")
     // fetch('http://localhost:3000/updateGate', {
-    fetch('http://localhost:5000/updateGate', {
+    fetch(`${API_BASE_URL}/updateGate`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -706,7 +713,7 @@ function Lights({ state, controlState, setControlState, fetchData }) {
 
   // function ChangeState(e){
   //   console.log("Lights data being sent:")
-  //   fetch('http://localhost:5000/updateLights', {
+  //   fetch(`${API_BASE_URL}/updateLights', {
   //     method: 'POST',
   //     headers: {
   //         'Content-Type': 'application/json',
@@ -729,7 +736,7 @@ function Lights({ state, controlState, setControlState, fetchData }) {
     try {
       console.log("Lights data being sent:");
       // const response = await fetch('http://localhost:3000/updateLights', {
-      const response = await fetch('http://localhost:5000/updateLights', {
+      const response = await fetch(`${API_BASE_URL}/updateLights`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -792,7 +799,7 @@ function Water({ state, controlWaterState, setControlState, fetchData }) {
     try {
       console.log("Lights data being sent:");
       // const response = await fetch('http://localhost:3000/updateWater', {
-      const response = await fetch('http://localhost:5000/updateWater', {
+      const response = await fetch(`${API_BASE_URL}/updateWater`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -923,7 +930,7 @@ function Cleaner({ state, process, controlCleanerProcess, setControlProcess }) {
 
     console.log("Cleaner data being sent:");
     // fetch('http://localhost:3000/updateCleaner', {
-    fetch('http://localhost:5000/updateCleaner', {
+    fetch(`${API_BASE_URL}/updateCleaner`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
