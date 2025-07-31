@@ -1665,8 +1665,8 @@ def CompareGate():
     try:
         if Communication.splited[1] != None and Communication.splited[2] != None:
             print(f"Z brány přislo: {Communication.splited[1]}:{Communication.splited[2]}")
-            if(gatePos != Communication.splited[1]):
-                gatePos = Communication.splited[1]
+            if(str(gatePos) != Communication.splited[1]):
+                str(gatePos) = Communication.splited[1]
                 dbCommand(f"INSERT INTO gate (state_, date_) VALUES ('{gatePos}', CURRENT_TIMESTAMP)")
         
             if(gateState != Communication.splited[2]):
