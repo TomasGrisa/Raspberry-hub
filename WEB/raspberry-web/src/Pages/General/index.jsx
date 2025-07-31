@@ -259,9 +259,9 @@ function Grid() {
           <div className="Screen" />
           <GridItem nav={() => { navigate("/home/heater") }} isLightMode={isLightMode} wantNav={true}>
             <Heater>
-              <HeaterItems name="Obývák" temp={living + "°C"} input={livingInput} state={livingState} fetchData={fetchData} setInputValue={setLivingInput} inputRef={livingInputRef} />
-              <HeaterItems name="Koupelna" temp={bath + "°C"} input={bathInput} state={bathState} fetchData={fetchData} setInputValue={setBathInput} inputRef={bathInputRef} />
-              <HeaterItems name="Boiler" temp={boiler + "°C"} input={boilerInput} state={boilerState} fetchData={fetchData} setInputValue={setBoilerInput} inputRef={boilerInputRef} />
+              <HeaterItems name="Obývák" temp={living + "°C"} input={livingInput} state={livingState} fetchData={fetchData} setInputValue={setLivingInput} inputRef={livingInputRef} isLightMode={isLightMode} />
+              <HeaterItems name="Koupelna" temp={bath + "°C"} input={bathInput} state={bathState} fetchData={fetchData} setInputValue={setBathInput} inputRef={bathInputRef} isLightMode={isLightMode} />
+              <HeaterItems name="Boiler" temp={boiler + "°C"} input={boilerInput} state={boilerState} fetchData={fetchData} setInputValue={setBoilerInput} inputRef={boilerInputRef} isLightMode={isLightMode} />
             </Heater>
           </GridItem>
           <GridItem nav={() => { navigate("/home/gate") }} isLightMode={isLightMode} wantNav={true}>
@@ -310,7 +310,7 @@ function Heater({ children }) {
   );
 }
 
-function HeaterItems({ name, temp, input, state, fetchData, setInputValue, inputRef }) {
+function HeaterItems({ name, temp, input, state, fetchData, setInputValue, inputRef, isLightMode }) {
   console.log("Heater got data: " + temp, input, state)
   const [isProcessing, setIsProcessing] = useState(false);
   const [localValue, setLocalValue] = useState(input);
@@ -490,7 +490,7 @@ function HeaterItems({ name, temp, input, state, fetchData, setInputValue, input
       <h4 style={{ margin: "0" }}>{name}</h4>
       <h5 className="ActualTemp">{temp}</h5>
       {/* <input className="HeaterTextInput" type="number" ref={inputRef} value={localValue} onChange={ChangeInputValue} onBlur={handleBlur} onKeyDown={handleKeyPress}/> */}
-      <input className="HeaterTextInput" type="number" ref={inputRef} value={localValue} onFocus={() => setIsFocused(true)} onAbort={() => setIsFocused(false)} onKeyUp={handleKeyPress} onChange={InputChange} />
+      <input className={`HeaterTextInput${isLightMode ? " light" : ""}`} type="number" ref={inputRef} value={localValue} onFocus={() => setIsFocused(true)} onAbort={() => setIsFocused(false)} onKeyUp={handleKeyPress} onChange={InputChange} />
       {/* <input type="checkbox" className="Switch" checked={state}></input> */}
       <label className="Switch">
         <input className="SwitchInput" type="checkbox" checked={state} disabled={isProcessing} onChange={ChangeState} />

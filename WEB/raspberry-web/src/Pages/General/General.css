@@ -358,6 +358,12 @@
   background-color: #212121;
 }
 
+.HeaterTextInput.light {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #cccccc;
+}
+
 .ActualTemp {
   margin: 0;
 }
