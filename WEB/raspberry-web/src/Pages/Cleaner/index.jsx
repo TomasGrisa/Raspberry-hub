@@ -319,13 +319,13 @@ function Cleaner() {
     const stateInterpreter = (num) => {
       switch (num) {
         case 1:
-          return "Zavřena";
+          return "Vypnuto";
         case 2:
-          return "Otevřena";
+          return "Provzdušňování";
         case 3:
-          return "Otevírání";
+          return "Odčerpávání";
         case 4:
-          return "Zavírání";
+          return "Odkalování";
         default:
           return "Neznámý stav";
       }
